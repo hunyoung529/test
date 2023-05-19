@@ -1,21 +1,22 @@
 .wrap { 
       width: 1750px;
-      
+      margin: 0 auto;
+      font-family: 'Inter'; 
     }
   .menu{
         text-align: right;
-        margin: 99px 99px 10px 85px;
+        font-size: 36px;
+        line-height: 44px;
         
 
     }
   .menu > a{
         color: #000;
         text-decoration: none;
-        margin: 60px 60px;
+        
     }
-    .mainvisual > img{width: 100%;}
-  .content{width: 1750px;
-      margin: 0 auto;}
+    .mainvisual > img {width: 1750px;}
+    .content01 {margin: 133px 0 127px 0;}
     .content01 > b{font-size: 74px;}
     .content01 > p{
       font-size: 36px;
@@ -29,6 +30,7 @@
       padding: 15px 20px;
       border-radius: 32px;
       display: inline-block;
+      text-decoration: none;
     }
     .content02{
       display: flex;
@@ -50,4 +52,42 @@
       margin: 49 231 0 89;
     }
     .content02 > div > img{width:100%}
-
+    .content03{
+      display: flex;
+      
+    }
+    .reverse {flex-direction: row-reverse;
+    }
+    .reverse > div:nth-child(1){
+      width: 40%;
+    }
+    .reverse > div:nth-child(2){
+      width: 60%;
+    }
+    .content03{
+      margin: 171px 0 186px 0;
+    }
+    .content03 > div{
+      width: 50%;
+      align-items: center;
+    }
+    .content03 > div > b{
+      font-size: 40px;
+      line-height: 48.41px;
+      color: #000;
+    }
+    .content03 > div > p{
+      font-size: 34px;
+      color: #545454;
+      line-height: 41.15px;
+      margin: 49 231 0 89;
+    }
+    .content03 >div > a {
+      font-size: 32px;
+      background: #d9d9d9;
+      padding: 15px 20px;
+      border-radius: 32px;
+      display: inline-block;
+      text-decoration: none;
+    }
+   
