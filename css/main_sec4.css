@@ -1,0 +1,154 @@
+@charset "UTF-8";
+body {
+  margin: 0 auto;
+}
+
+.main_sec4 {
+  width: 100%;
+}
+
+.main_sec4_word {
+  font-family: "SUIT-Regular";
+  width: 100%;
+  background-color: #23402a;
+  height: 338px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+
+.main_sec4_word_p1 {
+  width: 100%;
+  position: relative;
+  font-size: 25px;
+}
+
+.main_sec4_word_p1::before {
+  content: "";
+  border: 2px solid #eff298;
+  width: 30%;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+
+.main_sec4_word_p2 {
+  font-size: 20px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.main_sec4_word_p3 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.main_sec4_pic {
+  margin: 183px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.main_sec4_pic figure {
+  margin: 0;
+  border: transparent;
+  border-radius: 10%;
+  cursor: pointer;
+  overflow: hidden;
+}
+.main_sec4_pic figure img {
+  transition: transform 0.3s ease;
+}
+
+.main_sec4_pic figure img:hover {
+  transform: scale(1.1); /* 이미지 크기를 110%로 확대 */
+  transition: transform 0.3s ease;
+} /*# sourceMappingURL=main_sec4.css.map */
+
+/* ///////////////////////////////// 반응형 시작  */
+
+@media all and (max-width: 1024px) {
+  .main_sec4_pic {
+    margin: 118px auto;
+    /* margin: 183px; */
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  .main_sec4_pic figure {
+    width: 60%;
+    margin: 0;
+    border: transparent;
+    border-radius: 10%;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .main_sec4_pic figure img {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .main_sec4_pic figure img:hover {
+    transform: scale(1.1); /* 이미지 크기를 110%로 확대 */
+    transition: transform 0.3s ease;
+  }
+  .main_sec4_word_p1 {
+    width: 100%;
+    position: relative;
+    font-size: 23px;
+  }
+
+  .main_sec4_word_p1::before {
+    content: "";
+    border: 2px solid #eff298;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 15px;
+  }
+
+  .main_sec4_word_p2 {
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  .main_sec4_word_p3 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  /*# sourceMappingURL=main_sec4.css.map */
+}
+
+@media all and (max-width: 768px) {
+  .main_sec4_word_p1::before {
+    width: 25%;
+  }
+
+  .main_sec4_pic {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .main_sec4_word_p1::before {
+    width: 15%;
+  }
+  .main_sec4_pic {
+    flex-direction: column;
+  }
+  .main_sec4_pic figure {
+    width: 80%;
+  }
+}

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*============모바일~480============================*/
+@media (max-width: 480px) {
+  .checkRes {
+    padding: 0 20px;
+  }
+  .checkRes .checkRes_head .checkRes_head_inner a img {
+    width: 63px;
+  }
+  .checkRes .checkRes_body {
+    width: 95%;
+  }
+  .checkRes .checkRes_body .checkRes_body_inner {
+    width: 75%;
+  }
+  .checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top {
+    margin: 0 0px;
+    height: auto;
+  }
+  .checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top .top_personal .tooLong span {
+    display: block;
+  }
+}
+/*=================태블릿 481px ~ 1439px  ===========*/
+@media (min-width: 481px) and (max-width: 1439px) {
+  .checkRes {
+    padding: 0 20px;
+  }
+  .checkRes .checkRes_head .checkRes_head_inner a img {
+    width: 63px;
+  }
+  .checkRes .checkRes_body {
+    width: 80%;
+  }
+  .checkRes .checkRes_body .checkRes_body_inner {
+    width: 75%;
+  }
+  .checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top {
+    margin: 0 0px;
+    height: auto;
+  }
+}/*# sourceMappingURL=checkReservation_Responsive.css.map */

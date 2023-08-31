@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.signUp_backg {
+  font-family: "ChosunGu";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(35, 64, 42, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+.signUp_backg .signUp {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 864px;
+  padding-bottom: 50px;
+  border-radius: 29px;
+  background: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.signUp_backg .signUp .signUp_head {
+  width: 85%;
+  margin: 0 auto;
+  padding: 7% 0;
+}
+.signUp_backg .signUp .signUp_head .signUp_head_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.signUp_backg .signUp .signUp_head .signUp_head_top figure img {
+  width: 40%;
+}
+.signUp_backg .signUp .signUp_head .signUp_head_top a {
+  width: 25px;
+  height: 25px;
+}
+.signUp_backg .signUp .signUp_head .signUp_head_bot hr {
+  height: 1px;
+  background: #23402A;
+  margin-top: 10px;
+}
+.signUp_backg .signUp .signUp_head .signUp_head_bot h2 {
+  margin-top: 2rem;
+  color: #23402A;
+  text-align: left;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+}
+.signUp_backg .signUp .signUp_head .signUp_head_bot h2 span {
+  font-weight: 400;
+  line-height: normal;
+}
+.signUp_backg .signUp .signUp_body {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.signUp_backg .signUp .signUp_body .signUp_left {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.signUp_backg .signUp .signUp_body .signUp_left .signUp_email {
+  background: #EBEBEB;
+  width: 95%;
+  height: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUp_backg .signUp .signUp_body .signUp_left .signUp_email a figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signUp_backg .signUp .signUp_body .signUp_left .signUp_email a figure figcaption {
+  font-family: "ChosunGu" !important;
+  color: #23402A;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.signUp_backg .signUp .signUp_body .signUp_right {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.signUp_backg .signUp .signUp_body .signUp_right ul {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+.signUp_backg .signUp .signUp_body .signUp_right ul li {
+  width: 22.5rem;
+  height: 59px;
+  border-radius: 29.5px;
+  border: 2px solid #23402A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signUp_backg .signUp .signUp_body .signUp_right ul li a span {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.signUp_backg .signUp .signUp_body .signUp_right .signUp_noneMember li a span {
+  color: #23402A;
+}
+.signUp_backg .signUp .signUp_body .signUp_right .signUp_kakao li {
+  border: 2px solid #F8D23A;
+}
+.signUp_backg .signUp .signUp_body .signUp_right .signUp_kakao li a span {
+  color: #F8D23A;
+}
+.signUp_backg .signUp .signUp_body .signUp_right .signUp_google li {
+  border: 2px solid #BD2E2E;
+}
+.signUp_backg .signUp .signUp_body .signUp_right .signUp_google li a span {
+  color: #BD2E2E;
+}/*# sourceMappingURL=signUp.css.map */

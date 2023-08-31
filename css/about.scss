@@ -1,0 +1,599 @@
+@import url('../../common/reset.css'); 
+// @import url('../../common/font.css');
+
+//아이콘 //Keyboard Arrow Down
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0'); 
+
+//아이콘 //오른쪽 왼쪽 화살표
+@import url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css'); 
+
+//------------------------------------------------------------
+@mixin flex($x: center, $y: center){
+    display: flex; justify-content: $x; align-items: $y;
+    @content;
+}
+@mixin font($x: inherit, $y: inherit, $z: inherit){
+    font-size: $x;
+    font-weight: $y;
+    color: $z;
+}
+@mixin spaceTxt(){
+    letter-spacing: 200%;
+}
+@mixin text(){
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+@mixin English(){
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+  }
+$mainColor: #23402A;
+$subColor1: #112619;
+$subColor2: #EFF299;
+//------------------------------------------------------------
+
+*{
+    box-sizing: border-box;
+    font-family: 'inter', 'Sans-Serif';
+}
+html{
+    // font-size: 16px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+//------------------------------------------------------------
+section{
+    padding: 0 183px !important;
+    transition: .2s padding;
+    >.content{
+       
+    }
+
+    &:nth-of-type(1), &:nth-of-type(4){
+        >.content{
+            // max-width: 1075px;
+        }
+    }
+}
+
+
+main{
+    >.main{
+        position: relative;
+        // border: 1px solid red;
+        width: 100%; height: 100vh;
+        @include flex();
+        
+        >.blackBg{
+            position: absolute; top: 0; left: 0; z-index: 1;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        >.bg{
+            transform: translate();
+            position: absolute; top: 0; left: 0; z-index: 0;
+            width: 100%; height: 100%;
+            overflow: hidden;
+            background: url('../sub/img/about/Img_main.JPG') 0 bottom/ cover
+        }//.bg
+
+        >.mainTxt{
+            // border: 1px solid red;
+
+            position: absolute; z-index: 2;
+            color: white;
+            display: inline-block;
+            text-align: center;
+            >h1{
+                // @include English();
+                @include font(6.25rem, 400, white);
+                @include text();
+                @include spaceTxt();
+                margin: 0;
+                margin-bottom: 30px;
+            }
+            >p{
+                @include font(1.5625rem, 400, white);
+                letter-spacing: 3.2px;
+                margin: 0;
+                margin-top: 17px;
+                line-height: calc(100% + 5px);
+
+                >br.mb{
+                    display: none;
+                }
+            }
+        }
+    }//div.main
+
+    >section.about_sec1{
+        background: linear-gradient(90deg, $subColor1 0%, $mainColor 12.50%);
+        width: 100%; height: auto;
+        @include flex();
+        >.content{
+            // outline: 1px solid red;
+            width: 100%;
+            // outline: 1px solid red;
+            @include flex(center, flex-start);
+            >p{
+                flex-shrink: 0;
+                width: 509px; height: 762px;
+                >img{
+                    width: 100%; height: 100%;
+                }
+            }
+
+            >div.right{
+                margin-top: 70px;
+
+                >span.deco{
+                    display: inline-block;
+                    width: 100%; height: 20px;
+                    background-color: $subColor2;
+                }
+
+                >div.txtWrapper{
+                    margin-top: 170px;
+                    // transform: translateX(88px);
+                    margin-left: 200px;
+                    letter-spacing: 1.6px;
+                    @include font(1rem, inherit, white);
+                    @include text();
+                    white-space: nowrap;
+                    >b{
+                        display: inline-block;
+                        @include font(2.1875rem, 600, white);
+                        @include spaceTxt();
+                        letter-spacing: 3.6px;
+                        >strong{
+                            color: $subColor2;
+                        }
+                        margin-bottom: 44px;
+                    }
+                    
+                    >div{    
+                        // transform: translateX(25px);
+                        line-height: 200%;
+                        >strong{
+                            color: $subColor2;
+                            >span{
+                                &:nth-of-type(1){
+                                    // margin-left: 10px;
+    
+                                }
+                                &:nth-of-type(2){
+                                    // margin-left: 50px;
+                                    
+                                }
+    
+                            }//span
+                        }//strong
+                    }//div
+                }//div.txtWrapper
+            }//div.deco
+
+
+        }//.content
+
+        
+        >span.deco{
+            display: none;
+        }
+        >.contentTbM{
+            // outline: 1px solid blue;
+            display: none;
+        }
+    }//section.about_sec1 //about페이지_1.호텔소개
+
+    >section.about_sec2{
+        // border: 1px solid red;
+        background-color: white;
+        height: auto;
+        padding-top: 150px !important;
+        padding-bottom: 150px !important;
+        @include flex();
+        >.content{
+            width: 100%;
+            >h2{
+                @include font(2.5rem, bold, $mainColor);
+                margin-bottom: 30px;
+            }//h2
+
+            >div.swiper{
+                display: inline-block;
+                width: 100%;
+                >div.accordionWrapper{
+                    // outline: 1px solid red;
+                    border-top: 2px solid $mainColor;
+                        >div.accordion{
+                            @include text();
+                            >h3.question{
+                                border-bottom: 1px solid #D3D9D4;
+                                @include font(1.5rem, bold, $mainColor);
+                                padding: 28px 35px;
+                                @include flex(space-between);
+
+                                cursor: pointer;
+
+                                .ui-accordion-header-icon{
+                                    display: none;
+                                }
+                                span.q{
+                                    &::before{
+                                        content: 'Q';
+                                        display: inline-block;
+                                        margin-right: 35px;
+                                    }
+                                }
+
+                                >span.arrow{
+                                    font-family: 'Material Symbols Outlined';
+                                    display: inline-block;
+                                }//.arrow
+                            }//h3
+
+                            >div.answer, .ui-accordion-content{
+                                @include text();
+                                white-space: pre-line;
+                                padding: 25px 35px;
+                                background-color: #E9ECEA;
+                                line-height: 160%;
+
+                            }
+                        }//div.accordion
+                }//div
+
+                >.btnsWrapper{
+                    @include flex();
+                    @include font(1.5rem, 700, $mainColor);
+                    margin-top: 40px;
+
+                    >div.left, div.right{
+                        font-family: 'Material Symbols Outlined';
+                        cursor: pointer;
+                    }
+
+                    >.left{
+                        
+                    }
+
+                    >nav{
+                        margin: 0 20px;
+                        >span{
+
+                        }
+
+                    }
+
+                    >.right{
+
+                    }
+                }//.btn
+
+
+            }//div.swiper
+
+        }//.content
+    }//section.about_sec2 //about페이지_2.FAQ
+
+    >section.about_sec3{
+        padding: 0px !important; //초기화 
+        padding-bottom: 110px !important;
+        background-color: $mainColor;
+
+        @include flex(){flex-direction: column};
+
+        >div.about_sec2_header{
+            width: 100%;
+            @include flex();
+            padding: 30px 0 58px;
+            &:before{
+                content: '';
+                width: 100%; height: 1px;
+                background-color: $subColor2;
+            }
+            >h2{
+                letter-spacing: 3.6px;
+                @include font(2rem, bold, $subColor2);
+                white-space: nowrap;
+                margin: 0 105px;
+                
+            }
+            &:after{
+                content: '';
+                width: 100%; height: 1px;
+                background-color: $subColor2;
+            }
+        }//header.about_sec2_header
+
+        >div.map{
+            width: 100%; height: 500px;
+            background-color: #bbb;
+        }
+
+        >.content{
+            // outline: 1px solid red;
+            margin-top: 55px; 
+
+
+            >.txtWrapper{
+                @include flex(space-between, flex-start);
+                @include text();
+                @include font(1rem, normal, $subColor2);
+                >.left{
+                    margin-right: 95px;
+                    >article{
+                        &:nth-of-type(1){
+                            margin-bottom: 55px;
+                        }
+                        >h4{
+                            @include font(2rem, 700, $subColor2);
+                            margin-bottom: 20px;
+                        }
+                        >p{
+                            line-height: 187.5%;
+                            @include flex(inherit, flex-start){flex-direction: column;};
+                            >span{
+                                margin-bottom: 10px;
+                                >br{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }//article
+                }//right
+
+                >.right{
+                    transform: translateY(52px);
+                    @include flex(center, flex-start){flex-direction: column};
+                    >p{
+                        margin-bottom: 20px;
+                    }
+
+                    >span{
+                        margin-bottom: 10px;
+                        &::before{
+                            width: 50px;
+                            display: inline-block;
+                        }
+
+                        &:nth-of-type(1){
+                            &::before{
+                                content: 'Tel.';
+                            }
+
+                        }
+                        &:nth-of-type(2){
+                            &::before{
+                                content: 'Email.';
+                            }
+
+                        }
+                        &:nth-of-type(3){
+                            &::before{
+                                content: 'Fax.';
+                            }
+
+                        }
+                    }
+                }
+            }//txtWrapper
+        }//.content
+        >.TMF_Mb{
+            display: none;
+        }
+    }//section.about_sec3 //about페이지_3.MAP
+
+    >section.about_sec4{
+        background-color: white;
+        padding-top: 180px !important; padding-bottom: 244px !important; // 180px + 32px + 32px;
+        @include flex(center, flex-start);
+
+        >ul.content{
+            width: 100%;
+            @include flex(space-between, flex-start);
+            >li{
+                width: 20vw;
+                height: 20vw; 
+
+                >a{
+                    text-decoration: none;
+                    >figure{
+                        height: 100%;
+                        text-align: center;
+                        >p{
+                            transition: .2s;
+                            background: white center center / 70% 70% no-repeat scroll;
+                            border: 3px solid $mainColor;
+                            height: 20vw;
+                        }
+
+                        >figcaption{
+                            transition: .2s;
+                            margin-top: 32px;
+                            @include font(2rem, bold, $mainColor);
+                            letter-spacing: 3.2px;
+                        }
+
+                    }//figure
+
+                }//a
+
+                &:nth-of-type(1){
+                    >a{
+                        >figure{
+                            >p{
+                                background-image: url('../sub/img/about/icon_insta.svg');
+
+                            }
+                        }
+                    }
+                }//li:nth-of-type(1)
+
+                &:nth-of-type(2){
+                    >a{
+                        >figure{
+                            >p{
+                                background-image: url('../sub/img/about/icon_youtube.svg');
+    
+                            }
+                        }
+                    }
+                }//:nth-of-type(2)
+
+                &:nth-of-type(3){
+                    >a{
+                        >figure{
+                            >p{
+                                background-image: url('../sub/img/about/icon_twitterX.svg');
+    
+                            }
+                        }
+                    }
+                }//:nth-of-type(3)
+
+                &:hover{
+                    >a{
+                        >figure{
+                            >p{
+                                border: 3px solid $mainColor;
+                                background-color: $mainColor;
+                            }
+        
+                            >figcaption{
+                                @include font(2.2rem, bold, $subColor2);
+                            }
+                        }//figure
+                    }
+
+
+                    
+                    &:nth-of-type(1){
+                        >a{
+                            >figure{
+                                >p{
+                                    background-image: url('../sub/img/about/icon_instaActive.svg');
+        
+                                }
+                            }
+                        }
+                    }//li:nth-of-type(1) //hover
+
+                    &:nth-of-type(2){
+                        >a{
+                            >figure{
+                                >p{
+                                    background-image: url('../sub/img/about/icon_youtubeActive.svg');
+        
+                                }
+                            }
+                        }
+                    }//li:nth-of-type(2) //hover
+
+                    &:nth-of-type(3){
+                        >a{
+                            >figure{
+                                >p{
+                                    background-image: url('../sub/img/about/icon_twitterXActive.svg');
+        
+                                }
+                            }
+                        }
+                    }//li:nth-of-type(3) //hover
+
+                }//li:hover
+
+            }//li
+        }//ul.content
+
+
+
+        >div.SNS_Mb{
+            display: none;
+            >div.SNSSwiper_Mb{
+                >ul.content_Mb{
+                }//ul.content_Mb
+            }
+        }//>ul.content
+    }//section.about_sec4 //about페이지_4.SNS
+
+
+    >nav{
+        position: fixed; top: 50%; left: 32px; transform: translateY(-50%);
+        z-index: 999;
+        height: 150px;
+        >ul{
+            height: 100%;
+            @include flex(space-between, flex-start){flex-direction: column;}
+            >li{
+                transition: .2s;
+                a{
+                    @include font(1rem, normal, white);
+                    text-decoration: none;
+                    cursor: pointer;
+                    opacity: 50%;
+                    transition: .2s;
+                    
+                    
+                    &::before{
+                        content: '';
+                        display: inline-block;
+                        width: 7px; height: 7px;
+                        background-color: white;
+                        border-radius: 50%;
+                        margin-right: 9px;
+                    }
+
+                    &.active{
+                        &::after{
+                            content: '';
+                            display: inline-block;
+                            width: 10px; height: 2px;
+                            margin-left: 9px;
+                            background-color: white;
+                            vertical-align: middle;
+                        }
+                        opacity: 100%;
+                    }
+                    
+                    &.green{
+                        color: $mainColor;
+                        &:before{
+                            background-color: $mainColor;
+                        }
+                        &:after{
+                            background-color: $mainColor;
+                        }
+                    }
+                }//a
+            }//li
+        }//ul
+        
+        &.green{
+            color: $mainColor;
+            >ul{
+                >li{
+                    &::before{
+                        background-color: $mainColor;
+                    }
+                }
+            }
+        }//&.green
+
+    }//nav
+}//main
+
+footer{
+     
+}
+
+
+
+
+
+
+
+

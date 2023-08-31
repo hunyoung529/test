@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*============모바일~480============================*/
+@media (max-width: 480px) {
+  .signUp_backg .signUp {
+    width: 400px;
+  }
+  .signUp_backg .signUp .signUp_body {
+    flex-direction: column;
+  }
+  .signUp_backg .signUp .signUp_body .signUp_left {
+    width: 100%;
+    align-items: center;
+  }
+  .signUp_backg .signUp .signUp_body .signUp_left .signUp_email {
+    padding: 50px;
+  }
+  .signUp_backg .signUp .signUp_body .signUp_right {
+    margin-top: 50px;
+    width: 100%;
+    align-items: center;
+  }
+}
+/*=================태블릿 481px ~ 1439px  ===========*/
+@media (min-width: 481px) and (max-width: 1439px) {
+  .signUp_backg .signUp {
+    width: 600px;
+  }
+  .signUp_backg .signUp .signUp_body {
+    flex-direction: column;
+  }
+  .signUp_backg .signUp .signUp_body .signUp_left {
+    width: 100%;
+    align-items: center;
+  }
+  .signUp_backg .signUp .signUp_body .signUp_left .signUp_email {
+    padding: 50px;
+  }
+  .signUp_backg .signUp .signUp_body .signUp_right {
+    margin-top: 50px;
+    width: 100%;
+    align-items: flex-end;
+  }
+  .signUp_backg .signUp .signUp_body .signUp_right ul li {
+    width: 500px;
+  }
+}/*# sourceMappingURL=signUp_Responsive.css.map */

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roomDetail</title>
+
+    
+        <!-- 공용(header, menu_show, footer) -->
+        <link rel="stylesheet" href="../common/common.css" />
+        <link rel="stylesheet" href="../common/reset.css" />
+        <link rel="stylesheet" href="../common/Moodal.css" />
+      
+        <!-- 로그인 팝업 관련 ↓↓↓ -->
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" /> -->
+        <link rel="stylesheet" href="../css/login.css" />
+        <link rel="stylesheet" href="../css/login_Responsive.css" />
+        <!-- 로그인 팝업 관련 ↑↑↑ -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Parisienne&display=swap"
+          rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      
+        <!-- script /////////////////////////-->
+        <!-- !스크립트 순서 건들지 마세요 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+      
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      
+        <!-- 스크립트 파일들 -->
+        <script defer src="../js/common.js"></script> <!-- 헤더 풋터 -->
+        <!-- padding이 사라지는 원인 ↓ -->
+        <script defer src="../js/loginLoad.js"></script>
+        <script defer src="../js/custom.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/roomDetail.css">
+    <link rel="stylesheet" href="../css/roomDetailTablet.css">
+    <link rel="stylesheet" href="../css/roomDetailMobile.css">
+    <!-- <link rel="stylesheet" href="./common.css" /> -->
+    <!-- <link rel="stylesheet" href="../common/commons_sub/common.css" /> -->
+
+    <!-- css2 -->
+    <!-- <link rel="stylesheet" href="../common/commons_sub/css/layout.css" /> -->
+    <link rel="stylesheet" href="../common/main/css/reset.css" />
+    <link rel="stylesheet" href="../common/main/css/main.css" />
+    <link rel="stylesheet" href="../common/main/css/Moodal.css" />
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+   
+    <!-- js -->
+    <script defer src="../js/roomDetail.js"></script>
+
+
+</head>
+<body  style="height: auto;">
+    <header id="header">
+    
+    </header>     
+       
+    <div class="menu_show">
+
+    </div>
+
+     <main>
+        <div class="main swiper mainSwiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <p class="bg"><img src="../sub/img/roomDetail/Img_main1.jpg" alt=""></p>
+                    <div class="blackBg"></div>
+                </li>
+                <li class="swiper-slide">
+                    <p class="bg"><img src="../sub/img/roomDetail/Img_main2.jpg" alt=""></p>
+                    <div class="blackBg"></div>
+                </li>
+                <li class="swiper-slide">
+                    <p class="bg"><img src="../sub/img/roomDetail/Img_main1.jpg" alt=""></p>
+                    <div class="blackBg"></div>
+                </li>
+            </ul>
+
+            <button class="leftBtn swiper-button-prev" type="button"></button>
+            <button class="rightBtn swiper-button-next" type="button"></button>
+
+            <div class="pagination swiper-pagination">
+            </div>
+        </div><!-- div.main -->
+
+        <section class="roomDetail_sec1">
+            <h2>Standard Single A</h2>
+            <div class="reservWrapper">
+                <p>예약페이지에서 해당 룸을 예약하세요.</p>
+                <div class="reservBtnsWrapper">
+                    <div class="bg"></div>
+                    <a href="./reservation.html">예약페이지</a>
+                </div>
+            </div>
+
+            <div class="infoTxtWrapper">
+                <ul class="iconWrapper">
+                    <li class="icon">
+                        <figure>
+                            <p></p>
+                            <figcaption>Wifi</figcaption>
+                        </figure>
+                    </li>
+                    <li class="icon">
+                        <figure>
+                            <p></p>
+                            <figcaption>주차가능</figcaption>
+                        </figure>
+                    </li>
+                    <li class="icon">
+                        <figure>
+                            <p></p>
+                            <figcaption>에어컨</figcaption>
+                        </figure>
+                    </li>
+                    <li class="icon">
+                        <figure>
+                            <p></p>
+                            <figcaption>세탁시설</figcaption>
+                        </figure>
+                    </li>
+                    <li class="icon">
+                        <figure>
+                            <p></p>
+                            <figcaption>식당</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+
+                <ul class="infoTxtWrapper">
+                    <li>사이즈: <code>36m²</code></li>
+                    <li>객실형태: <code>거실1 부엌1 화장실1</code></li>
+                    <li>최대 / 최소인원수: <code>1 ~ 3명</code></li>
+                    <li>금액: <code>...₩</code></li>
+                    <li>어메니티: <code></code></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="roomDetail_sec2">
+            <h2 class="Logo"></h2>
+            <article class="otherRooms">
+                <h3>Room</h3>
+
+                <div class="BtnsWrapper">
+                    <button class="leftBtn swiper-button-prev2" type="button"></button>
+                    <button class="rightBtn swiper-button-next2" type="button"></button>
+                </div>
+
+                <div class="slide otherRoomsSwiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="">
+                                <figure>
+                                    <p><img src="" alt=""></p>
+                                    <figcaption></figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+
+                    
+                    <div class="pagination">
+                        <span class="prePage">1</span>
+                        /
+                        <span class="allPage">7</span>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+        
+     </main>
+
+    <footer>
+
+    </footer>
+
+
+</body> 
+</html>

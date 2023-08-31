@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*============모바일~480============================*/
+@media (max-width: 480px) {
+  .checkCus {
+    padding: 0 20px;
+  }
+  .checkCus .checkCus_head .checkCus_head_inner a img {
+    width: 63px;
+  }
+  .checkCus .checkCus_body {
+    width: 95%;
+  }
+  .checkCus .checkCus_body .checkCus_body_inner {
+    width: 75%;
+  }
+  .checkCus .checkCus_body .checkCus_body_inner .checkCus_body_top {
+    margin: 0 0px;
+    height: auto;
+  }
+  .checkCus .checkCus_body .checkCus_body_inner #resCheck .checkCus_body_top figure {
+    margin-bottom: 20px;
+  }
+  .checkCus .checkCus_body .checkCus_body_inner .checkCus_body_bot_wrap .checkCus_body_bot {
+    margin-top: 0;
+  }
+}
+/*=================태블릿 481px ~ 1439px  ===========*/
+@media (min-width: 481px) and (max-width: 1439px) {
+  .checkCus {
+    padding: 0 20px;
+  }
+  .checkCus .checkCus_head .checkCus_head_inner a img {
+    width: 63px;
+  }
+  .checkCus .checkCus_body {
+    width: 80%;
+  }
+  .checkCus .checkCus_body .checkCus_body_inner {
+    width: 75%;
+  }
+  .checkCus .checkCus_body .checkCus_body_inner .checkCus_body_top {
+    margin: 0 0px;
+    height: auto;
+  }
+  .checkCus .checkCus_body .checkCus_body_inner .checkCus_body_bot_wrap .checkCus_body_bot {
+    margin-top: 0;
+  }
+  .checkCus .checkCus_body .checkCus_body_inner #resCheck .checkCus_body_top figure {
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=checkCustomer_Resoponsive.css.map */

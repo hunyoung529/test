@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/login_ Responsive.css">
+    <link rel="stylesheet" href="../common/reset.css">
+    <script defer="" src="../js/login.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- ↓↓↓ API ↓↓↓ -->
+    <meta name ="google-signin-client_id" content="28757865908-ifrp5bvpfkvetcd579arn0k7jcl5f70k.apps.googleusercontent.com">
+
+</head>
+<body>
+    <div class="login_backg">
+        <article class="login">
+            <div class="login_head">
+                <div class="login_head_top">
+                    <!-- <figure><img src="./img/LionHill_logo/logo_horizontal.png"></figure> -->
+                    <figure><img src="../sub/img/LionHill_logo/logo_horizontal.png"></figure>
+                    <!-- <a><img src="./img/members/btn_close.png"></a> -->
+                    <a id="closeBtn"><img src="../sub/img/members/btn_close.png"></a>
+                </div>
+                <div class="login_head_bot">
+                    <hr>
+                    <h2>로그인</h2>
+                </div>
+            </div>
+            <div class="login_body">
+                <div class="login_left">
+                    <div class="idpw">
+                        <input type="email" placeholder="이메일 주소" id="emailField" class="forEmailCookie">
+                        <input type="password" placeholder="비밀번호" id="passwordField">
+                        <div class="eyeBtn">
+                            <span class="on"><img src="/sub/img/members/icon_eye_on.png"></span>
+                            <span class="off"><img src="/sub/img/members/icon_eye_off.png"></span>
+                        </div>
+                    </div>
+                    <div class="login_pageMove">
+                        <div class="checkbox">
+                            <input type="checkbox" id="cbox" class="saveId">
+                            <label for="cbox"></label>
+                        </div>
+                        <div class="btnLogin">
+                            <button id="loginButton">로그인</button>
+                            <!-- <a href="#">비밀번호 찾기</a> -->
+                            <!-- <a href="./signUp.html">회원가입</a> -->
+                            <a href="../sub/signUp.html">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+<!-- ======↓====api들어가는부분 수정X=======↓====== -->
+                <div class="login_right">
+                    <ul class="login_noneMember">
+                        <li>
+                            <!-- <a href="./checkCustomer.html"><span>비회원 주문조회</span></a> -->
+                            <a href="../sub/checkCustomer.html"><span>비회원 주문조회</span></a>
+                        </li>
+                    </ul>
+                    <ul class="login_kakao">
+                        <li onclick="kakaoLogin();">
+                            <a href="javascript:void(0)">
+                                <span>카카오 아이디로 로그인</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <!-- <script>//카카오 로그인 script
+                    Kakao.init('c74cee27e841ddfac6edca4429b56ab3');
+                    console.log(Kakao.isInitialized());
+                    function kakaoLogin() {
+                        Kakao.Auth.login({
+                        success: function (response) {
+                            Kakao.API.request({
+                            url: '/v2/user/me',
+                            success: function (response) {
+                                console.log(response)
+                            },
+                            fail: function (error) {
+                                console.log(error)
+                            },
+                            })
+                        },
+                        fail: function (error) {
+                            console.log(error)
+                        },
+                        })
+                    }
+                    </script> -->
+                    <ul class="login_google">
+                        <li id="GgCustomLogin">
+                            <a href="javascript:void(0)">
+                                <span>구글 아이디로 로그인</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <script>//구글 로그인 script
+                        // function init() {
+                        //     gapi.load('auth2', function() {
+                        //         gapi.auth2.init();
+                        //         options = new gapi.auth2.SigninOptionsBuilder();
+                        //         options.setPrompt('select_account');
+                        //         // 추가는 Oauth 승인 권한 추가 후 띄어쓰기 기준으로 추가
+                        //         options.setScope('email profile openid https://www.googleapis.com/auth/user.birthday.read');
+                        //         // 인스턴스의 함수 호출 - element에 로그인 기능 추가
+                        //         // GgCustomLogin은 li태그안에 있는 ID, 위에 설정한 options와 아래 성공,실패시 실행하는 함수들
+                        //         gapi.auth2.getAuthInstance().attachClickHandler('GgCustomLogin', options, onSignIn, onSignInFailure);
+                        //     })
+                        // }
+                        
+                        // function onSignIn(googleUser) {
+                        //     var access_token = googleUser.getAuthResponse().access_token
+                        //     $.ajax({
+                        //         // people api를 이용하여 프로필 및 생년월일에 대한 선택동의후 가져온다.
+                        //         url: 'https://people.googleapis.com/v1/people/me'
+                        //         // key에 자신의 API 키를 넣습니다.
+                        //         , data: {personFields:'birthdays', key:'AIzaSyDlGUZNRJZ-_CYec_5xsY2D8ZmlNu3Np_Y', 'access_token': access_token}
+                        //         , method:'GET'
+                        //     })
+                        //     .done(function(e){
+                        //         //프로필을 가져온다.
+                        //         var profile = googleUser.getBasicProfile();
+                        //         console.log(profile)
+                        //     })
+                        //     .fail(function(e){
+                        //         console.log(e);
+                        //     })
+                        // }
+                        // function onSignInFailure(t){		
+                        //     console.log(t);
+                        // }
+                    </script>
+                    
+                </div>
+<!-- ↑↑↑↑↑↑↑↑↑==api들어가는부분 수정X==↑↑↑↑↑↑↑↑↑↑↑↑ -->
+            </div>
+        </article>
+    </div>
+</body>
+</html>

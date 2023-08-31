@@ -1,0 +1,65 @@
+[
+  {
+    "room_name": "Couple Room 1",
+    "image": "./img/room/img_coupleB1.jpg",
+    "capability": "기준 6명 최대 12명",
+    "size": "거실+객실/23평",
+    "adult": "0",
+    "children": "0",
+    "price": "640,000원"
+  },
+  {
+    "room_name": "Couple Room 2",
+    "image": "./img/room/img_standardCoupleB1.jpg",
+    "capability": "기준 6명 최대 12명",
+    "size": "거실+객실/23평",
+    "adult": "0",
+    "children": "0",
+    "price": "640,000원"
+  },
+  {
+    "room_name": "Couple Room 3",
+    "image": "./img/room/img_standardSingleA3.jpg",
+    "capability": "기준 6명 최대 12명",
+    "size": "거실+객실/23평",
+    "adult": "0",
+    "children": "0",
+    "price": "640,000원"
+  },
+  {
+    "room_name": "Deluxe Room 1",
+    "image": "./img/room/img_deluxeSingle1.jpg",
+    "capability": "기준 6명 최대 12명",
+    "size": "거실+객실/23평",
+    "adult": "0",
+    "children": "0",
+    "price": "640,000원"
+  },
+  {
+    "room_name": "Deluxe Room 2",
+    "image": "./img/room/img_deluxeSingle2.jpg",
+    "capability": "기준 6명 최대 12명",
+    "size": "거실+객실/23평",
+    "adult": "0",
+    "children": "0",
+    "price": "640,000원"
+  },
+  {
+    "room_name": "Deluxe Room 3",
+    "image": "./img/room/img_deluxeCouple1.jpg",
+    "capability": "기준 6명 최대 12명",
+    "size": "거실+객실/23평",
+    "adult": "0",
+    "children": "0",
+    "price": "640,000원"
+  },
+  {
+    "room_name": "Deluxe Room 4",
+    "image": "./img/room/img_deluxeCouple21.jpg",
+    "capability": "기준 6명 최대 12명",
+    "size": "거실+객실/23평",
+    "adult": "0",
+    "children": "0",
+    "price": "640,000원"
+  }
+]

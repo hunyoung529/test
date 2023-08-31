@@ -1,0 +1,338 @@
+// @import url('../../common/reset.css'); 
+
+//아이콘 
+//Keyboard Arrow Down
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0'); 
+//History
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'); 
+//------------------------------------------------------------
+@mixin flex($x: center, $y: center){
+    display: flex; justify-content: $x; align-items: $y;
+    @content;
+}
+@mixin font($x: inherit, $y: inherit, $z: inherit){
+    font-size: $x;
+    font-weight: $y;
+    color: $z;
+}
+@mixin spaceTxt(){
+    letter-spacing: 200%;
+}
+@mixin text(){
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+@mixin English(){
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+}
+$mainColor: #23402A;
+$subColor1: #112619;
+$subColor2: #EFF299;
+//------------------------------------------------------------
+
+*{
+    box-sizing: border-box;
+    font-family: 'inter', 'Sans-Serif';
+}
+html{
+    // font-size: 16px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+//------------------------------------------------------------
+@media (max-width: 950px) {
+    
+
+section{
+    padding: 0 62px !important;
+    >.content{
+        // max-width: 1075px;
+    }
+}//section
+
+
+main{
+    >.main{
+        
+        >ul{
+            >li{
+                >.blackBg{
+                }//.blackBg
+                >.bg{
+
+                    >img{
+
+                    }
+                }//.bg
+                
+            }//li
+        }//ul
+
+        >button{
+
+            &:hover{
+            }
+        }//button
+
+        >.leftBtn{
+        }//.leftBtn
+
+        >.rightBtn{
+        }//.rightBtn
+
+        >div.pagination{
+
+            >.swiper-pagination-bullet{
+
+                &.swiper-pagination-bullet-active{
+
+                }
+            
+            }
+        }//div.pagination
+    }//div.main
+
+@media (max-width: 750px) {
+        
+
+    >section.roomDetail_sec1{
+        padding-left: 62px !important; padding-right: 62px !important; 
+
+        >h2{
+            @include font(2rem);
+        }
+
+        >div.reservWrapper{
+
+            >p{
+
+            }
+            >.reservBtnsWrapper{
+                @media (max-width: 500px) {
+                    
+                    width: 180px; height: 50px;
+                }//@media (max-width: 500px)
+
+                >.bg{
+
+                }
+
+                >a{ 
+
+    
+                    &:before{
+
+                    };
+                    
+                }
+                &:hover{
+                    >.bg{}
+                    >a{}
+                }
+            }//reservBtnsWrapper
+        }//div.reservWrapper
+
+        >div.infoTxtWrapper{
+            @include flex(){flex-direction: column};
+
+
+            >ul.iconWrapper{
+                @media (max-width: 500px) {
+                    @include flex(flex-start){
+                        flex-direction: column;
+                        row-gap: 20px;
+                    };
+                };//@media (max-width: 500px)
+                >li.icon{
+                    margin: 0 11px; 
+                    >figure{
+                        
+                        >p{
+            
+                        }
+                        >figcaption{
+
+                        }
+
+                    }//li.icon>figcaption
+                    &:nth-of-type(1){
+                        p{
+
+                        }
+                    }
+                    &:nth-of-type(2){
+                        p{
+
+                        }
+                    }
+                    &:nth-of-type(3){
+                        p{
+
+                        }
+                    }
+                    &:nth-of-type(4){
+                        p{
+
+                        }
+                    }
+                    &:nth-of-type(5){
+                        p{
+
+                        }
+                    }
+                }//li.icon
+            }//ul.iconWrapper
+
+            ul.infoTxtWrapper{
+                @media (max-width: 500px) {
+                    margin-top: 280px; // 아이콘모음이 세로로 바뀐만큼
+                }//@media (max-width: 500px)
+                text-align: center;
+                width: 100%;
+                >li{
+                    font-weight: bold;
+                    @include flex(){flex-direction: column};
+
+                    &::before{//회색선
+                        content: '';
+                        display: inline-block;
+                        width: 40%; height: 1px;
+                        margin-bottom: 20px;
+                        background-color: #ddd;
+                    }
+
+                    &:first-child{//li 첫번째
+                        &::before{//회색선
+                            width: 90%;  
+                        }
+                    }
+                    
+                    >code{
+                        font-weight: normal;
+                        display: inline-block;
+                        margin-top: 20px;
+                    }//code
+
+                    
+                    &:nth-of-type(5){//어메니티
+                        @include flex(){flex-direction: column;}
+                        >code{
+                            margin-top: 20px;
+                            @media (max-width: 500px) {
+                                @include flex(){flex-direction: column;}
+                            }//@media (max-width: 500px)
+                            >dl{
+                                 margin: 0 5px;
+                                 @media (max-width: 500px) {
+                                    margin: 0 5px 10px;
+                                    &:not(:last-child) {
+                                        margin-right: 5px;
+                                    }
+                                 }
+                                >dt{
+                                }//dt
+                                >dd{
+                                    ul{
+                                        @include flex(){};
+                                        li{
+                                        }
+                                    }
+                                }//dd
+                            }
+                        }//code
+                    }
+                }//li
+            }//ul.infoTxtWrapper
+
+        }//div.infoTxtWrapper
+
+    }//section.roomDetail_sec1
+}//@media (max-width: 750px)
+
+    >section.roomDetail_sec2{
+        padding: 187px 50px 260px !important;
+        >h2.Logo{
+            
+        }//h2.Logo
+
+        >article.otherRooms{
+
+            >h3{
+
+            }
+
+            >div.BtnsWrapper{
+
+                >button{
+
+                }
+                >button.leftBtn{
+
+                }
+                >button.rightBtn{
+
+                }
+            }//div.BtnsWrapper
+
+            >div.slide{
+
+                >ul{
+
+                    >li{
+
+                        >a{
+
+                            >figure{
+
+                                >p{
+
+                                    >img{
+
+                                    }
+                                }
+
+                                >figcaption{
+
+                                }//figcaption
+
+                            }//figure
+
+                            &:hover{
+                                img{
+
+                                } 
+                            }
+                        }//li>a
+                    }//li
+                }//ul
+
+                >div.pagination{
+
+                    >span{
+
+                    }
+                    >span.prePage{
+
+                    }
+                    >span.Allpage{
+
+                    }
+                }//div.pagination
+
+            }//div.slide
+
+
+        }//article.otherRooms
+
+    }//section.roomDetail_sec2
+
+}//main
+
+footer{
+     
+}
+}//@media (max-width: 950px) 

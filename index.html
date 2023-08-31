@@ -1,81 +1,911 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./test.css">
-</head>
-<body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라이온힐-메인</title>
+    <link rel="stylesheet" href="./common/common.css" />
+    <link rel="stylesheet" href="./common/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./common/Moodal.css" />
+    <link rel="stylesheet" href="./css/main_sec1.css" />
+    <link rel="stylesheet" href="./css/main_sec2edit.css" />
+    <link rel="stylesheet" href="./css/main_sec3.css" />
+    <link rel="stylesheet" href="./css/main_sec4.css" />
 
-<div class="wrap"> 
-    <div class="menu">
-        <a href="#">HOME</a>
-        <a href="#">BEST PLACE</a>
-        <a href="#">DESTINATIONS</a>
-        <a href="#">TRAVEL TIPS</a>
-    
-    </div>
-    <div class="visual">
-        <div class="mainvisual">
-            <p>
-                <img src="./images/img_photo1.jpg" alt="">
+    <!-- 로그인 팝업 관련 ↓↓↓ -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/login_Responsive.css" />
+    <!-- 로그인 팝업 관련 ↑↑↑ -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- script /////////////////////////-->
+    <!-- !스크립트 순서 건들지 마세요 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 스크립트 파일들 -->
+    <script defer src="./js/common.js"></script> <!-- 헤더 풋터 -->
+    <script defer src="./js/loginLoad.js"></script>
+    <script defer src="./js/custom.js"></script>
+    <script defer src="./js/main_sec1.js"></script>
+    <script defer src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <header id="header"></header>
+
+    <main>
+      <div class="wrap">
+        <section class="main_vis">
+          <div class="vis_box">
+            <div class="txt_wrap">
+              <div class="ani">
+                <p>"편안히 쉬고, 즐기고, 재충전하세요."</p>
+                <strong>"Relax, Enjoy, and Recharge"</strong>
+              </div>
+            </div>
+            <div class="movie">
+              <video
+                src="./main/mov/main_video.mp4"
+                autoplay
+                muted
+                loop
+                style="width: 100%"
+              ></video>
+            </div>
+            <div class="bot_wrap">
+              <button class="btt">
+                <img src="./main/img/bot_icon.png" alt="" />
+              </button>
+            </div>
+
+            <div class="modal-overlay">
+              <div class="modal-window">
+                <div class="wrap">
+                  <div class="cont_reser">
+                    <div class="bot_top">
+                      <div class="left">
+                        <span class="icon"
+                          ><img src="./main/img/chat.webp" alt=""
+                        /></span>
+                        <div class="txt">
+                          <h2>예약 고객센터</h2>
+                          <span>운영시간 보기</span>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <a href="#" class="set"
+                          ><img src="./main/img/settings.png" alt=""
+                        /></a>
+                        <a href="#" class="close"
+                          ><img src="./main/img/close.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="bot_br"></div>
+
+                    <div class="bot_chat_wrap">
+                      <div class="bot_mid">
+                        <div class="msg">
+                          <div class="icon">
+                            <img src="./main/img/chat.webp" alt="" />
+                          </div>
+                          <div class="txt">
+                            <span>숙소 예약실</span>
+                            <p>
+                              안녕하세요. 고객님😄<br />
+                              예약 고객센터 입니다<br />
+                              궁금하신 사항을 선택해주세요💚
+                            </p>
+                          </div>
+                        </div>
+                        <div class="btn_new">
+                          <button class="new_m">
+                            <span
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                foundation="[object Object]"
+                                class="sc-beqWaB jWmMk"
+                                data-testid="bezier-react-icon"
+                                margintop="0"
+                                marginright="4"
+                                marginbottom="0"
+                                marginleft="0"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  fill-rule="evenodd"
+                                  d="m21.324 11.116-15.588-9a1 1 0 0 0-1.471 1.106l1.92 7.774 11.145.636v.702l-11.148.662-1.976 7.775a.998.998 0 0 0 .97 1.246c.171 0 .344-.044.5-.133l15.648-9.036a1 1 0 0 0 0-1.732Z"
+                                  clip-rule="evenodd"
+                                ></path></svg></span
+                            >새 문의하기
+                          </button>
+                        </div>
+                        <div class="kwd">보통 수십 분 내 답변</div>
+                      </div>
+                      <div class="bot_btm">
+                        <div class="tt">
+                          <form action="">
+                            <input
+                              type="text"
+                              placeholder="다른방법으로 상담하기"
+                            />
+                          </form>
+                        </div>
+                        <div class="kak">
+                          <a href="https://open.kakao.com/o/sfI0J6Cf"
+                            ><img src="./main/img/kakao.png" alt=""
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="bot_ing">
+                        <a href="#">
+                          <span
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              foundation="[object Object]"
+                              class="sc-beqWaB jWmMk"
+                              data-testid="bezier-react-icon"
+                              margintop="0"
+                              marginright="4"
+                              marginbottom="0"
+                              marginleft="0"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                                d="M12 1C5.959 1 1.054 5.872 1 11.9v.2C1.054 18.128 5.959 23 12 23c6.075 0 11-4.925 11-11S18.075 1 12 1Zm5.804 15.212a1.642 1.642 0 0 1 .094-1.26 6.56 6.56 0 0 0 .65-3.785c-.368-2.961-2.756-5.355-5.718-5.716a6.604 6.604 0 0 0-7.38 7.378c.362 2.962 2.755 5.35 5.716 5.719a6.565 6.565 0 0 0 3.786-.65 1.641 1.641 0 0 1 1.26-.094l1.344.448a.55.55 0 0 0 .696-.695l-.448-1.345Zm-8.832-4.267c0 1.131.267 1.594.907 1.594s.908-.463.908-1.594c0-1.132-.267-1.595-.908-1.595-.64 0-.907.463-.907 1.595Zm4.242 0c0 1.132.267 1.595.908 1.595.64 0 .907-.463.907-1.595s-.267-1.595-.907-1.595c-.641 0-.908.463-.908 1.595Z"
+                                clip-rule="evenodd"
+                              ></path></svg></span>
+                          채널톡 이용중</a
+                        >
+                      </div>
+                      <div class="bot_btn">
+                        <div class="ico_wrap">
+                          <ul>
+                            <li>
+                              <a href="">
+                                <figure>
+                                  <img src="./common/img/home.svg" alt="" />
+                                  <figcaption>홈</figcaption>
+                                </figure>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="">
+                                <figure>
+                                  <img src="./common/img/sms.svg" alt="" />
+                                  <figcaption>대화</figcaption>
+                                </figure>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="">
+                                <figure>
+                                  <img src="./common/img/set.svg" alt="" />
+                                  <figcaption>설정</figcaption>
+                                </figure>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cont_center">
+                    <div class="front">
+                      <div class="inn">
+                        <button class="prev">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 13 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            foundation="[object Object]"
+                            class="InnerIconstyled__Icon-ch-front__sc-197h5bb-0 bZcKFT"
+                            defaultopacity="1"
+                            hoveredopacity="1"
+                            margintop="0"
+                            marginright="0"
+                            marginbottom="0"
+                            marginleft="8"
+                            withtheme="true"
+                          >
+                            <path
+                              fill="currentColor"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9.17255 16.4226C8.84711 16.748 8.31947 16.748 7.99404 16.4226L2.1607 10.5893C1.83527 10.2638 1.83527 9.73619 2.1607 9.41075L7.99404 3.57742C8.31947 3.25198 8.84711 3.25198 9.17255 3.57742C9.49799 3.90285 9.49799 4.43049 9.17255 4.75593L3.92847 10L9.17255 15.2441C9.49799 15.5695 9.49799 16.0972 9.17255 16.4226Z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <figure>
+                          <img src="./main/img/chat.webp" alt="" />
+                          <img src="./main/img/chat.webp" alt="" class="move" />
+                        </figure>
+                        <div class="txt">
+                          <span>예약 고객센터</span>
+                          <p>몇 분 내 답변 받으실 수 있어요</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="center_top">
+                      <figure>
+                        <img src="./main/img/chat.webp" alt="" />
+                      </figure>
+                      <div class="txt">
+                        <strong>예약 고객센터에 문의하기</strong>
+                        <p>운영시간 보기</p>
+                      </div>
+                    </div>
+                    <div class="center_mid">
+                      <div class="time">오전 11:42</div>
+                      <div class="chatt">
+                        <div class="msg_hd">숙소 예약실</div>
+                        <div class="msg_ct first">
+                          <figure>
+                            <img src="./main/img/chat.webp" alt="" />
+                          </figure>
+                          <div class="buble">
+                            <span
+                              >안녕하세요. 고객님😁<br />
+                              예약 고객센터 입니다<br />
+                              궁금하신 사항을 선택해주세요💚
+                            </span>
+                          </div>
+                          <div class="time" style="display: none">
+                            오전 12:20
+                          </div>
+                        </div>
+                        <div
+                          data-aos="fade-up"
+                          data-aos-anchor-placement="top-bottom"
+                          class="msg_ct two"
+                        >
+                          <a href="./sub/reservation.html">
+                            <button class="bubble">아직 예약 전이에요👋</button>
+                          </a>
+                          <a href="./sub/checkCustomer.html">
+                            <button class="bubble">예약을 완료했어요👍</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="reser_sec2">
+          <!-- <h2 class="title2">숙박정보</h2> -->
+          <div class="reser_sec2_info">
+            <div class="reser_sec2_wrap">
+              <div class="reser_sec2_room">
+                <label>RESERVATION</label>
+                <button class="select_room">ROOM</button>
+              </div>
+              <div class="reser_sec2_cal">
+                <label class="">CHECKIN/OUT</label>
+                <p class="select_date">
+                  <span class="start_date"></span> ~
+                  <span class="end_date"></span>
+                </p>
+              </div>
+              <div class="reser_sec2_num">
+                <div class="reser_sec2_room_num">
+                  <div class="total_room_num">
+                    <label>ROOM</label>
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="reser_sec2_adult">
+                  <div class="total_adult_num">
+                    <label>ADULT</label>
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="reser_sec2_children">
+                  <div class="total_children_num">
+                    <label>CHILDREN</label>
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+              <a class="btn_search" href="./sub/reservation.html">SEARCH</a>
+              <div class="sliding_content">
+                <div class="slide_wrap">
+                  <div class="rooms">
+                    <ul>
+                      <li
+                        class="btn_room"
+                        id="Couple Room 1"
+                        data-room="Couple Room 1"
+                      >
+                        <p>Couple Room 1</p>
+                        <p>Lion Hill</p>
+                      </li>
+                      <li
+                        class="btn_room"
+                        id="Couple Room 2"
+                        data-room="Couple Room 2"
+                      >
+                        <p>Couple Room 2</p>
+                        <p>Lion Hill</p>
+                      </li>
+                      <li
+                        class="btn_room"
+                        id="Couple Room 3"
+                        data-room="Couple Room 3"
+                      >
+                        <p>Couple Room 3</p>
+                        <p>Lion Hill</p>
+                      </li>
+                      <li
+                        class="btn_room"
+                        id="Deluxe Room 1"
+                        data-room="Deluxe Room 1"
+                      >
+                        <p>Deluxe Room 1</p>
+                        <p>Lion Hill</p>
+                      </li>
+                      <li
+                        class="btn_room"
+                        id="Deluxe Room 2"
+                        data-room="Deluxe Room 2"
+                      >
+                        <p>Deluxe Room 2</p>
+                        <p>Lion Hill</p>
+                      </li>
+                      <li
+                        class="btn_room"
+                        id="Deluxe Room 3"
+                        data-room="Deluxe Room 3"
+                      >
+                        <p>Deluxe Room 3</p>
+                        <p>Lion Hill</p>
+                      </li>
+                      <li
+                        class="btn_room"
+                        id="Deluxe Room 4"
+                        data-room="Deluxe Room 4"
+                      >
+                        <p>Deluxe Room 4</p>
+                        <p>Lion Hill</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="cal_wrap">
+                    <table class="Calendar">
+                      <thead>
+                        <tr>
+                          <td
+                            id="prevCalendar"
+                            onClick="prevCalendar();"
+                            class="cal_move"
+                          >
+                            &#60;
+                          </td>
+                          <td colspan="5">
+                            <span id="calYear"></span>년
+                            <span id="calMonth"></span>월
+                          </td>
+                          <td
+                            id="nextCalendar"
+                            onClick="nextCalendar();"
+                            class="cal_move"
+                          >
+                            &#62;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>일</td>
+                          <td>월</td>
+                          <td>화</td>
+                          <td>수</td>
+                          <td>목</td>
+                          <td>금</td>
+                          <td>토</td>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+                  <div class="select_num">
+                    <div class="room Couple1">
+                      <p for="">Couple Room 1</p>
+                      <div class="adult_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" readonly value="어른 0" />
+                        <span class="num_plus">+</span>
+                      </div>
+                      <div class="children_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" value="아동 0" readonly />
+                        <span class="num_plus">+</span>
+                      </div>
+                    </div>
+                    <div class="room Couple2">
+                      <p for="">Couple Room 2</p>
+                      <div class="adult_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" readonly value="어른 0" />
+                        <span class="num_plus">+</span>
+                      </div>
+                      <div class="children_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" value="아동 0" readonly />
+                        <span class="num_plus">+</span>
+                      </div>
+                    </div>
+                    <div class="room Couple3">
+                      <p for="">Couple Room 3</p>
+                      <div class="adult_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" readonly value="어른 0" />
+                        <span class="num_plus">+</span>
+                      </div>
+                      <div class="children_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" value="아동 0" readonly />
+                        <span class="num_plus">+</span>
+                      </div>
+                    </div>
+                    <div class="room Deluxe1">
+                      <p for="">Deluxe Room 1</p>
+                      <div class="adult_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" readonly value="어른 0" />
+                        <span class="num_plus">+</span>
+                      </div>
+                      <div class="children_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" value="아동 0" readonly />
+                        <span class="num_plus">+</span>
+                      </div>
+                    </div>
+                    <div class="room Deluxe2">
+                      <p for="">Deluxe Room 2</p>
+                      <div class="adult_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" readonly value="어른 0" />
+                        <span class="num_plus">+</span>
+                      </div>
+                      <div class="children_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" value="아동 0" readonly />
+                        <span class="num_plus">+</span>
+                      </div>
+                    </div>
+                    <div class="room Deluxe3">
+                      <p for="">Deluxe Room 3</p>
+                      <div class="adult_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" readonly value="어른 0" />
+                        <span class="num_plus">+</span>
+                      </div>
+                      <div class="children_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" value="아동 0" readonly />
+                        <span class="num_plus">+</span>
+                      </div>
+                    </div>
+                    <div class="room Deluxe4">
+                      <p for="">Deluxe Room 4</p>
+                      <div class="adult_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" readonly value="어른 0" />
+                        <span class="num_plus">+</span>
+                      </div>
+                      <div class="children_num">
+                        <span class="num_minus">-</span>
+                        <input type="text" value="아동 0" readonly />
+                        <span class="num_plus">+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="btn_close"></span>
+                  <button class="btn_confirm">확인</button>
+                </div>
+              </div>
+              <div class="sliding_dim"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="main_sec1_top">
+          <div class="main_sec1_uptitle">
+            <figure><img src="./main/img/main_sec2_img1.jpg" alt="" /></figure>
+            <figcaption>
+              <p>
+                라이온힐은 커플과 장기 숙박 손님을 위한 방이 마련되어있습니다.
+              </p>
+              <br />
+              <p>편안하고 행복한 시간을 위해, 높은 수준의</p>
+              <p>서비스로 인생의 소중한 순간들은 더욱</p>
+              <p>특별하고 뜻깊게 만들어 드립니다.</p>
+            </figcaption>
+          </div>
+        </section>
+
+        <section class="main_sec1">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide--one">
+                <div>
+                  <h2>Standard Single A</h2>
+                  <p>
+                    사이즈: 28m² | 객실형태: 거실1 화장실1 | 최대 / 최소인원수:
+                    1 ~ 2명 | 금액: 35000₩
+                  </p>
+                  <a href="./sub/roomDetail.html?key=0" target="_blank"
+                    >room detail</a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide--two">
+                <div>
+                  <h2>Standard Single B</h2>
+                  <p>
+                    사이즈: 29m² | 객실형태: 거실1 부엌1 화장실1 | 최대 /
+                    최소인원수: 1 ~ 2명 | 금액: 40000₩
+                  </p>
+                  <a href="./sub/roomDetail.html?key=1" target="_blank"
+                    >room detail</a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide--three">
+                <div>
+                  <h2>Standard Single C</h2>
+                  <p>
+                    사이즈: 34m² | 객실형태: 거실1 부엌1 방1 화장실1 | 최대 /
+                    최소인원수: 1 ~ 3명 | 금액: 46000₩
+                  </p>
+                  <a href="./sub/roomDetail.html?key=2" target="_blank"
+                    >room detail</a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide--four">
+                <div>
+                  <h2>Standard Couple A</h2>
+                  <p>
+                    사이즈: 38m² | 객실형태: 거실1 부엌1 방1 화장실1 | 최대 /
+                    최소인원수: 2 ~ 4명 | 금액: 55000₩
+                  </p>
+                  <a href="./sub/roomDetail.html?key=3" target="_blank"
+                    >room detail</a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide--five">
+                <div>
+                  <h2>Standard Couple B</h2>
+                  <p>
+                    사이즈: 39m² | 객실형태: 거실1 부엌1 방1 화장실1 | 최대 /
+                    최소인원수: 2 ~ 5명 | 금액: 60000₩
+                  </p>
+                  <a href="./sub/roomDetail.html?key=4" target="_blank"
+                    >room detail</a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide--six">
+                <div>
+                  <h2>Deluxe Single</h2>
+                  <p>
+                    사이즈: 40m² | 객실형태: 거실1 부엌1 방1 화장실1 | 최대 /
+                    최소인원수: 1 ~ 5명 | 금액: 85000₩
+                  </p>
+                  <a href="./sub/roomDetail.html?key=5" target="_blank"
+                    >room detail</a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide--seven">
+                <div>
+                  <h2>Deluxe Couple</h2>
+                  <p>
+                    사이즈: 50m² | 객실형태: 거실1 부엌1 방2 화장실1 | 최대 /
+                    최소인원수: 2 ~ 8명 | 금액: 115000₩
+                  </p>
+                  <a href="./sub/roomDetail.html?key=6" target="_blank"
+                    >room detail</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </section>
+
+        <section class="sec2">
+          <span class="logo"
+            ><img src="./main/img/facilites_logo.png" alt="로고"
+          /></span>
+          <div class="img_box">
+            <figure class="img_box2">
+              <img src="./main/img/main_sec2_img2.jpg" alt="다이닝" />
+            </figure>
+          </div>
+          <div class="text_box">
+            <h2 class="title2">FACILITES</h2>
+            <p>“라이언힐 만의 특별한 편의시설”</p>
+            <button class="more_btn">이미지 더 보기</button>
+          </div>
+          <div class="acor_wrap deactive">
+            <div class="img_container">
+              <ul class="img_wrap">
+                <li class="acor_img1">
+                  <strong class="title2">다이닝 룸</strong>
+                  <div class="gone">
+                    <strong class="titleS">다이닝 룸</strong>
+                    <p class="sec2_desc">
+                      다이닝은 신선하고 고급스러운 재료로 만든 다양한 요리를
+                      제공합니다. <br />
+                      메뉴는 매일 바뀌며, 계절에 따라 제철 식재료를 사용합니다.
+                      <br />
+                      다이닝은 제주 숲을 감상할 수 있는 아름다운 공간으로,
+                      <br />
+                      편안하고 여유로운 분위기에서 식사를 즐길 수 있습니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="acor_img2">
+                  <strong class="title2">공용주방</strong>
+                  <div class="gone">
+                    <strong class="titleS">공용주방</strong>
+                    <p class="sec2_desc">
+                      다이닝은 신선하고 고급스러운 재료로 만든 다양한 요리를
+                      제공합니다. <br />
+                      메뉴는 매일 바뀌며, 계절에 따라 제철 식재료를 사용합니다.
+                      <br />
+                      다이닝은 제주 숲을 감상할 수 있는 아름다운 공간으로,
+                      <br />
+                      편안하고 여유로운 분위기에서 식사를 즐길 수 있습니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="acor_img3">
+                  <strong class="title2">반려동물 운동장</strong>
+                  <div class="gone">
+                    <strong class="titleS">반려동물 운동장</strong>
+                    <p class="sec2_desc">
+                      라이온힐에 머무시는 동안 반려동물들이 마음껏 뛰어놀 수
+                      있는 공간입니다 <br />
+                      운동장에는 깨끗한 물과 그늘막이 마련되어 있어 반려동물들이
+                      편안하게 <br />
+                      휴식을 취할 수 있습니다.이용 시간은 오전 9시부터 오후
+                      6시까지입니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="acor_img4">
+                  <strong class="title2">피트니스 센터</strong>
+                  <div class="gone">
+                    <strong class="titleS">피트니스 센터</strong>
+                    <p class="sec2_desc">
+                      최신 운동기구와 편안한 공간을 제공합니다.<br />
+                      머무는 동안 피트니스 센터를 이용하여 건강하고 활기찬
+                      휴식을 즐겨보세요.<br />
+                      이용 시간은 오전 6시부터 오후 8시까지입니다.
+                    </p>
+                  </div>
+                </li>
+                <li class="acor_img5">
+                  <strong class="title2">수영장</strong>
+                  <div class="gone">
+                    <strong class="titleS">수영장</strong>
+                    <p class="sec2_desc">
+                      각 객실별로 프라이빗 온수 풀이 있습니다.<br />
+                      아름다운 제주 숲을 만끽하며 수영할 수 있습니다.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <span class="btn_close"></span>
+          </div>
+        </section>
+
+        <section class="main_sec3">
+          <div class="inner">
+            <ul class="event_wrap">
+              <li>
+                <a href="./sub/events.html">
+                  <figure>
+                    <img src="./main/img/event_icon_1_muscle.png" alt="" />
+                  </figure>
+                  <div class="txt_wrap">
+                    <span class="title">1.퍼스널 트레이닝 프로그램</span>
+                    <p class="txt">
+                      라이언힐에서 주최하는 커플 혹은 혼자 여행온 사람들을 위한
+                      건강 프로그램
+                    </p>
+                  </div>
+                  <div class="line"></div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub/events.html">
+                  <figure>
+                    <img src="./main/img/event_icon_2_beer.png" alt="" />
+                  </figure>
+                  <div class="txt_wrap">
+                    <span class="title">2. 라이언힐 모임 파티</span>
+                    <p class="txt">
+                      제주시 해녀들이 직접 수확해서 준 전복요리와 함께
+                      투숙객들과의 친목을 도모하는 파티입니다.
+                    </p>
+                  </div>
+                  <div class="line mobile_hidden"></div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub/events.html">
+                  <figure>
+                    <img src="./main/img/event_icon_3_farm.png" alt="" />
+                  </figure>
+                  <div class="txt_wrap">
+                    <span class="title">3. 감귤농장 체험</span>
+                    <p class="txt">
+                      근처 감귤 농장에서 직접 수확해보고 귤따보면서 직접 먹어
+                      볼수 있는 감귤 농장 체험
+                    </p>
+                  </div>
+                  <div class="line"></div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub/events.html">
+                  <figure>
+                    <img src="./main/img/event_icon_4_carrot.png" alt="" />
+                  </figure>
+                  <div class="txt_wrap">
+                    <span class="title">4. 말타기 체험</span>
+                    <p class="txt">
+                      말을 타고 제주도의 아름다운 자연을<br
+                        class="mobile_hidden"
+                      />
+                      감상하며 스트레스 해소
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub/events.html">
+                  <figure>
+                    <img src="./main/img/event_icon_5_speedcar.png" alt="" />
+                  </figure>
+                  <div class="txt_wrap">
+                    <span class="title">5. 레이싱 범퍼카</span>
+                    <p class="txt">
+                      넓은 초원에서 펼쳐지는 <br />범퍼카 레이싱 경주
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="./sub/events.html">
+                  <figure>
+                    <img src="./main/img/event_icon_6_hiking.png" alt="" />
+                  </figure>
+                  <div class="txt_wrap">
+                    <span class="title">6. 한라산 등반 코스</span>
+                    <p class="txt">
+                      한라산의 자랑 백록담 등반을 통한<br
+                        class="mobile_hidden"
+                      />
+                      제주도 여행 코스 즐기기
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="main_sec4">
+          <div class="main_sec4_word">
+            <p class="main_sec4_word_p1">
+              <b>라이언힐</b>에 오신걸 환영합니다.
             </p>
-        </div>
-    </div>
-    <div class="content">
-        <div class="content01">
-                <b>World's hottest destinations for vegans</b>
-                <p>
-                    Europe national glove hotsposts hiking miles sleep Turkey
-                    international Tripit paris. Amsterdam national earth flexi
-                    billity vus diary tour peratior uncharted maps Europe.
-                    Guide frequent flyuer yacht miles chartering. the China
-                    country hospitality spa Paris luxury.
-                </p>
-                <a href="#">Read More></a>
-        </div>
-        <div class="content02">
-            <div class="contentvisual01"><img src="./images/img_photo5.jpg" alt="">
+            <br />
+            <p class="main_sec4_word_p2">
+              나만의 프라이빗한 공간에서 혼자만의 여행
+            </p>
+            <p class="main_sec4_word_p3">
+              혹은 사랑하는 연인과 행복한 시간 보내세요
+            </p>
+          </div>
 
-            </div>
-            <div>
-                <b>
-                    An Amazing Journey 
-                    Through The Mountains.
-                </b>
-                <p>
-                    Europe national glove hotsposts hiking miles sleep Turkey
-                    international Tripit paris. Amsterdam national earth flexi
-                    billity vus diary tour peratior uncharted maps Europe.
-                    Guide frequent flyuer yacht miles chartering miles.
-                </p>
-            </div>
-        </div>
-        <div class="content03 reverse">
-            <div class="contentvisual02"><img src="./images/img_photo6.jpg" alt="">
+          <div class="main_sec4_pic">
+            <figure>
+              <img src="./main/img/Rectangle 28.png" />
+            </figure>
 
-            </div>
-            <div>
-                <b>
-                    Tips for Traveling in Winter season
-                </b>
-                <p>
-                    Europe national glove hotsposts hiking miles sleep Turkey
-                    international Tripit paris. Amsterdam national earth flexi
-                    billity vus diary tour peratior uncharted maps Europe.
-                    Guide frequent flyuer yacht miles chartering miles.
-                </p>
-                <p>
-                    Europe national glove hotsposts hiking miles sleep Turkey
-                    international Tripitparis.
-                </p>
-                <a href="#">Read More></a>
-            </div>
-        </div>
-    </div>
-</div>
+            <figure>
+              <img src="./main/img/Rectangle 29.png" />
+            </figure>
 
-</body>
+            <figure>
+              <img src="./main/img/Rectangle 30.png" />
+            </figure>
+
+            <figure>
+              <img src="./main/img/Rectangle 31.png" />
+            </figure>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer style="background-image: url(./main/img/Rectangl.jpg)"></footer>
+    <script src="./js/reservation.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

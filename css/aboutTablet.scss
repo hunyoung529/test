@@ -1,0 +1,466 @@
+// @import url('../../common/reset.css'); 
+// @import url('../../common/font.css');
+
+//아이콘 //Keyboard Arrow Down
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0'); 
+
+//------------------------------------------------------------
+@mixin flex($x: center, $y: center){
+    display: flex; justify-content: $x; align-items: $y;
+    @content;
+}
+@mixin font($x: inherit, $y: inherit, $z: inherit){
+    font-size: $x;
+    font-weight: $y;
+    color: $z;
+}
+@mixin spaceTxt(){
+    letter-spacing: 200%;
+}
+@mixin text(){
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+@mixin English(){
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+  }
+$mainColor: #23402A;
+$subColor1: #112619;
+$subColor2: #EFF299;
+//------------------------------------------------------------
+*{
+    box-sizing: border-box;
+    font-family: 'inter', 'Sans-Serif';
+}
+html{
+    // font-size: 16px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+//------------------------------------------------------------
+
+@media (max-width: 1440px){
+    div.main{
+        
+        >.blackBg{
+        }
+        >.bg{
+        }//.bg
+
+        >.mainTxt{
+
+            >h1{
+                font-size: 5rem;
+            }
+            >p{
+                font-size: 1.25rem;
+            }
+        }
+    }//div.main
+}//@media (maxx-width: 1440px)
+
+@media (max-width: 1200px) {
+section{
+    padding: 0 183px !important;
+    >.content{
+       
+    }
+
+    &:nth-of-type(1), &:nth-of-type(4){
+        >.content{
+            // max-width: 1075px;
+        }
+    }
+}
+
+
+main{
+    >.main{
+
+        
+        >.blackBg{
+
+        }
+        >.bg{
+
+        }//.bg
+
+        >.mainTxt{
+
+            >h1{
+
+            }
+            >p{
+
+            }
+        }
+    }//div.main
+
+    >section.about_sec1{
+        position: relative; top: 0; left: 0;
+        height: 762px;
+        @include flex(center, flex-start);
+        >.content{
+            display: none;
+        }
+
+
+        >span.deco{
+            position: absolute; top: 70px; left: 0; z-index: 0;
+            display: inline-block;
+            width: 100%; height: 20px;
+            background-color: $subColor2;
+        }
+        >.contentTbM{
+            position: relative; top: 0; left: 0;
+            width: 100%; height: 100%;
+            // outline: 1px solid red;
+            @include flex();
+            >p{
+                position: absolute; top: 0; left: 0; z-index: 0;
+                flex-shrink: 0;
+                width: 100%; height: 100%;
+                overflow: hidden;
+                &::after{
+                    content: '';
+                    width: 100%; height: 100%;
+                    position: absolute; top: 0; left: 0; 
+                    background-color: rgba(0, 0, 0, .8);
+                }
+                >img{
+                    position: absolute; top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 820px; height: 780px;
+                    
+                }
+            }
+
+                >div.txtWrapper{
+                    position: relative; top: 0; left: 0; z-index: 0;
+                    // transform: translateX(88px);
+                    @include font(1rem, inherit, white);
+                    @include text();
+                    letter-spacing: 1.6px;
+                    white-space: nowrap;
+                    text-align: center;
+                    >b{
+                        display: inline-block;
+                        @include font(2.1875rem, 600, white);
+                        @include spaceTxt();
+                        letter-spacing: 3.6px;
+                        >strong{
+                            color: $subColor2;
+
+                        }
+                        margin-bottom: 44px;
+                    }
+                    
+                    >div{    
+                        @include flex(){flex-direction: column};
+                        line-height: 250%;
+                        >strong{
+                            color: $subColor2;
+                            
+                            >br{
+                                display: none;
+                            }
+                        }//strong
+                    }//div
+                }//div.txtWrapper
+
+        }//.PCcontent
+    }//section.about_sec1 //about페이지_1.호텔소개
+
+    >section.about_sec2{
+
+        >.content{
+            >h2{
+                @include font(2.5rem, bold, $mainColor);
+                text-align: center;
+            }//h2
+
+            >div.swiper{
+
+                >div.accordionWrapper{
+                    >div.accordion{
+                        >h3.question{
+                            @include font(1.25rem, bold, $mainColor);
+
+                            .ui-accordion-header-icon{
+                            }
+                            span.q{
+                                &::before{
+
+                                }
+                            }
+
+                            >span.arrow{
+
+                            }//.arrow
+                        }//h3
+
+                        >div.answer, .ui-accordion-content{
+                            @include text();
+                            white-space: pre-line;
+                            padding: 20px 35px !important;
+                            background-color: #E9ECEA;
+                            line-height: 160%;
+
+                        }
+                    }//div.accordion
+                }//div.accordionWrapper
+
+                >.btnsWrapper{
+                    @include flex();
+                    @include font(1rem, 700, $mainColor);
+                    margin-top: 40px;
+                    >.left{
+                    }
+
+                    >nav{
+                        >span{
+
+                        }
+
+                    }
+
+                    >.right{
+                        display: inline-block;
+                    }
+                }//.btn
+
+
+            }//div.swiper
+
+        }//.content
+    }//section.about_sec2 //about페이지_2.FAQ
+
+    >section.about_sec3{
+
+        >div.about_sec2_header{
+
+            &:before{
+            }
+            >h2{
+                
+            }
+            &:after{
+
+            }
+        }//header.about_sec2_header
+
+        >div.map{
+        }
+
+        >.content{
+
+            >.txtWrapper{
+                @include font(0.6875rem, normal, $subColor2);
+                >.left{
+                    margin-right: 60px;
+                    >article{
+                        &:nth-of-type(1){
+                        }
+                        >h4{
+                            @include font(1.25rem, 700, $subColor2);
+                        }
+                        >p{
+                            >span{
+                            }
+                        }
+                    }//article
+                }//right
+
+                >.right{
+                    transform: translateY(40px);
+                    >p{
+                    }
+
+                    >span{
+                        margin-bottom: 10px;
+                        &::before{
+                        }
+
+                        &:nth-of-type(1){
+                            &::before{
+                            }
+
+                        }
+                        &:nth-of-type(2){
+                            &::before{
+                            }
+
+                        }
+                        &:nth-of-type(3){
+                            &::before{
+                            }
+
+                        }
+                    }//span
+                }//.left
+            }//txtWrapper
+        }//.content
+    }//section.about_sec3 //about페이지_3.MAP
+
+    >section.about_sec4{
+        padding-bottom: 238px !important; // 180px + 32px + 26px;
+        >ul.content{
+            
+            >li{
+
+                >a{
+                    text-decoration: none;
+                    // flex-shrink: 0;
+
+                    >figure{
+                        >p{
+                        }
+
+                        >figcaption{
+                            @include font(1.625rem, bold, $mainColor);
+                            @media (max-width: 1000px) {
+                                font-size: 1.2rem;
+                            }//@media (max-width: 1000px)
+                        }
+
+                    }//figure
+
+                }//a
+
+                &:nth-of-type(1){
+                    >a{
+                        >figure{
+                            >p{
+                            
+
+                            }
+                        }
+                    }
+                }//li:nth-of-type(1)
+
+                &:nth-of-type(2){
+                    @media (max-width: 1000px) {
+                        margin: 0 10px;
+                    }
+                    >a{
+                        >figure{
+                            >p{
+                     
+    
+                            }
+                        }
+                    }
+                }//:nth-of-type(2)
+
+                &:nth-of-type(3){
+                    >a{
+                        >figure{
+                            >p{
+                       
+    
+                            }
+                        }
+                    }
+                }//:nth-of-type(3)
+
+                &:hover{
+                    >a{
+                        >figure{
+                            >p{
+                                border: 3px solid $mainColor;
+                                background-color: $mainColor;
+                            }
+        
+                            >figcaption{
+                                @include font(1.825rem, bold, $subColor2);
+                                @media (max-width: 1000px) {
+                                    font-size: 1.4rem;
+                                }//@media (max-width: 1000px)
+                            }
+                        }//figure
+                    }
+
+
+                    
+                    &:nth-of-type(1){
+                        >a{
+                            >figure{
+                                >p{
+        
+                                }
+                            }
+                        }
+                    }//li:nth-of-type(1) //hover
+
+                    &:nth-of-type(2){
+                        >a{
+                            >figure{
+                                >p{
+        
+                                }
+                            }
+                        }
+                    }//li:nth-of-type(2) //hover
+
+                    &:nth-of-type(3){
+                        >a{
+                            >figure{
+                                >p{
+        
+                                }
+                            }
+                        }
+                    }//li:nth-of-type(3) //hover
+
+                }//li:hover
+
+            }//li
+        }//ul.content
+        
+    }//section.about_sec4 //about페이지_4.SNS
+
+
+    >nav{
+        >ul{
+            >li{
+                a{
+                    
+                    
+                    &::before{
+                    }
+
+                    &.active{
+                        &::after{
+                        }
+                    }
+                    
+                    &.green{
+                        &:before{
+                        }
+                        &:after{
+                        }
+                    }
+                }//a
+            }//li
+        }//ul
+        
+        &.green{
+            >ul{
+                >li{
+                    &::before{
+                    }
+                }
+            }
+        }//&.green
+
+    }//nav
+}//main
+
+footer{
+     
+}
+}//@media (max-width: 1440px) //태블릿
+

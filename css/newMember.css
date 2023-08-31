@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.newMember_backg {
+  font-family: 'SUIT-Regular';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(35, 64, 42, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+.newMember_backg .newMember {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 864px;
+  border-radius: 29px;
+  background: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.newMember_backg .newMember .newMember_head {
+  width: 85%;
+  margin: 0 auto;
+  padding: 7% 0 3% 0;
+}
+.newMember_backg .newMember .newMember_head .newMember_head_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.newMember_backg .newMember .newMember_head .newMember_head_top figure img {
+  width: 40%;
+}
+.newMember_backg .newMember .newMember_head .newMember_head_top a {
+  width: 25px;
+  height: 25px;
+}
+.newMember_backg .newMember .newMember_head .newMember_head_bot hr {
+  height: 1px;
+  background: #23402A;
+  margin-top: 10px;
+}
+.newMember_backg .newMember .newMember_body {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.newMember_backg .newMember .newMember_body .newMember_left h2 {
+  color: #23402A;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 45px;
+}
+.newMember_backg .newMember .newMember_body .newMember_left h2 span {
+  font-weight: 400;
+}
+.newMember_backg .newMember .newMember_body .newMember_left p {
+  padding: 10% 0;
+  color: #23402A;
+  font-size: 16px;
+  font-weight: 400;
+}
+.newMember_backg .newMember .newMember_body .newMember_left p span {
+  font-weight: 700;
+}
+.newMember_backg .newMember .newMember_body .newMember_right {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input {
+  color: #23402A;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li {
+  position: relative;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li .eyeBtn {
+  position: absolute;
+  bottom: 23%;
+  right: 2%;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li .eyeBtn .on {
+  display: none;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li .eyeBtn .off {
+  display: block;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li p {
+  padding: 3% 0;
+  margin-left: -10px;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li p span {
+  font-weight: bold;
+  color: #F30C0C;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li input {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: 2px solid #23402A;
+  background: #FFF;
+  margin-bottom: 15px;
+  padding: 5%;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li input::-moz-placeholder {
+  color: #D9D9D9;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li input::placeholder {
+  color: #D9D9D9;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li button {
+  width: 150px;
+  height: 45px;
+  border: 2px solid #23402A;
+  border-radius: 8px;
+  background: #23402A;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: 'SUIT-Regular';
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input li .email {
+  display: flex;
+  justify-content: space-between;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input .names {
+  display: flex;
+  justify-content: space-between;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input .names .name_left, .newMember_backg .newMember .newMember_body .newMember_right .info_input .names .name_right {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input .tels {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input .tels div {
+  display: flex;
+  justify-content: space-between;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input .tels .tel_input input:nth-child(1) {
+  width: 30%;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .info_input .tels .tel_input input:nth-child(2) {
+  width: 65%;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree {
+  width: 100%;
+  border: 2px solid #23402A;
+  color: #23402A;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_top {
+  border-bottom: 2px solid #23402A;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 5%;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_top div input {
+  display: none;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_top div input + label {
+  display: block;
+  width: 100%;
+  height: 16px;
+  background: url("../sub/img/members/checkbox_none.png") no-repeat 0 0px/contain;
+  cursor: pointer;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_top div input:checked + label {
+  background: url("../sub/img/members/checkbox_checked.png") no-repeat 0 0px/contain;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_top div label::after {
+  content: "전체 약관 동의";
+  margin-left: 20px;
+  color: #23402A;
+  text-align: center;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_mid {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_mid li {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 0;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_mid li div input {
+  display: none;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_mid li div input + label {
+  display: block;
+  width: 100%;
+  height: 16px;
+  background: url("../sub/img/members/checkbox_none.png") no-repeat 0 0px/contain;
+  cursor: pointer;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_mid li div input:checked + label {
+  background: url("../sub/img/members/checkbox_checked.png") no-repeat 0 0px/contain;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_mid li div label span {
+  margin-left: 20px;
+  color: #23402A;
+  text-align: center;
+}
+.newMember_backg .newMember .newMember_body .newMember_right .plz_agree .agree_bot button {
+  width: 100%;
+  height: 45px;
+  border: 2px solid rgb(35, 64, 42);
+  background: #23402A;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+  font-family: 'SUIT-Regular';
+}
+
+.eyeBtn.active .on {
+  display: block !important;
+}
+.eyeBtn.active .off {
+  display: none !important;
+}/*# sourceMappingURL=newMember.css.map */

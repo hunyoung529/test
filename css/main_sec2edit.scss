@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import url(../common/reset.css);
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "ChosunGu";
+}
+/*
+.sec2 {
+   max-width: 1440px; 
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  font-size: 1rem;
+  color: #eff299;
+   padding: 200px 0; 
+  background-color: #23402a;
+}
+*/
+
+/*
+.sec2::after {
+  content: "";
+  background-color: white;
+  background-size: 30% 150px;
+  height: 210px;
+  width: 35%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+*/
+/*
+.sec2::before {
+  content: "";
+  background-color: white;
+  height: 200px;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+*/
+.text_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text_box button {
+  text-decoration: none;
+}
+
+.title2 {
+  font-size: 1.5625rem;
+}
+
+.sec2 {
+  position: relative;
+  /* max-width: 1440px; */
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  font-size: 1rem;
+  color: #eff299;
+  padding: 200px 0;
+  background-color: #112619;
+}
+.sec2 .logo {
+  position: absolute;
+  left: 10%;
+  bottom: 50px;
+  z-index: 2;
+}
+.sec2::after {
+  content: "";
+  background-color: white;
+  background-size: 30% 150px;
+  height: 210px;
+  width: 30%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.sec2::before {
+  content: "";
+  background-color: white;
+  height: 210px;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.img_box2 {
+  height: 100%;
+}
+.img_box {
+  width: 70%;
+  height: 800px;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+
+.img_box img {
+  width: 100%;
+  height: 100%;
+}
+.text_box {
+  font-family: "SUIT-Regular";
+  background-color: #23402a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+
+  z-index: 2;
+}
+.text_box p {
+  margin-top: 13px;
+}
+.text_box .more_btn {
+  color: inherit;
+  font-family: inherit;
+  width: 127px;
+  height: 41px;
+  background-color: transparent;
+  border: 1px solid #eff299;
+  margin-top: 17px;
+  cursor: pointer;
+}
+.text_box .more_btn:hover {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.5s;
+}
+.text_box.deactive {
+  display: none;
+}
+
+.img_box.deactive {
+  display: none;
+}
+
+.acor_wrap .img_container .img_wrap .acor_img figcaption .title2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.acor_wrap .img_container .img_wrap .acor_img figcaption .sec2_desc {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 20px;
+  opacity: 0;
+}
+.acor_wrap .img_container .img_wrap .acor_img figcaption .sec2_desc.on {
+  opacity: 1;
+}
+.acor_wrap .btn_close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 3;
+  display: none;
+}
+.acor_wrap .btn_close::after {
+  content: "×";
+  display: inline-block;
+  font-size: 2.1875rem;
+  color: #eff299;
+  cursor: pointer;
+}
+
+.deactive {
+  display: none;
+}
+.sec2{
+    font-family: "ChosunGu";
+    .acor_wrap{
+        z-index: 2;
+        width: 100%;
+        height: 800px;
+        position: relative;
+        .img_container{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            .img_wrap{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                width: 100%;
+                height: 100%;
+                li{
+                    height: 645px;
+                    padding: 135px 80px;                    
+                    border-radius: 20px;
+                    color: white;
+                    flex-grow: 1;
+                    transition: 1.5s;
+                    display: flex; justify-content: center; align-items: center;
+                    .title2{writing-mode: vertical-lr; height: 100%;}
+                    .gone{
+                        text-align: left;
+                        display: none;
+                        writing-mode: sideways-lr;
+                        .titleS {font-size: 25px; font-weight: 600;}
+                        .sec2_desc{margin-top: 25px;}
+                    }
+                }
+                li:hover{flex-grow: 10;}
+                li:hover .title2{display: none; transition: 1s;}
+                li:hover .gone{display: block; transition: 1s;}
+                .acor_img1{background-image: url('../main/img/main_sec2_img1.jpg');}
+                .acor_img2{background-image: url('../main/img/main_sec2_img2.jpg');}
+                .acor_img3{background-image: url('../main/img/main_sec2_img3.jpg');}
+                .acor_img4{background-image: url('../main/img/main_sec2_img4.jpg');}
+                .acor_img5{background-image: url('../main/img/main_sec2_img5.jpg');}
+            }
+        }
+    }
+}
+
+
+
+/* 반응형 시작 //////////// */
+
+@media all and (max-width: 1024px) {
+  .img_box {
+    height: 540px;
+  }
+
+  .sec2 .logo img {
+    height: 80px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,497 @@
+header {
+  position: fixed;
+  width:100%;
+  height:100%;
+  top: 0;
+  z-index: 10;
+  height:100px;
+  transition:1s;
+  transform: translateY(0%);
+}
+header.active {
+  transform: translateY(-100%);
+}
+header .inner {
+  width: 100%;
+  background-color: rgba(35, 64, 42, 0.7);
+  
+
+}
+header .inner .inner2{
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+header .inner .inner2 img {
+  width: 177px;
+  height: 44px;
+}
+header .inner .inner2 ul {
+  color: #fff;
+  display: flex;
+  margin-left:20%;
+}
+header .inner .inner2 ul li {
+  margin-right: 60px;
+}
+
+header .inner .inner2 .btn_wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap:35px;
+}
+header .inner .inner2 .btn_wrap button {
+  cursor: pointer;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  width: 127px;
+  height: 40px;
+}
+header .inner .inner2 .btn_wrap .menu_btn{
+  display:none;
+}
+
+header .inner .inner2 .btn_wrap button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.menu_show {
+  display: none;
+}
+
+.menu_show a{
+  display:none;
+}
+
+
+footer {
+  color: #fff;
+  width: 100%;
+  background-color: black;
+  background-size: cover;
+  width: 100%;
+  height: 312px;
+}
+footer .inner {
+  padding-top: 50px;
+  margin: auto 180px;
+}
+footer .inner .foot_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .inner .foot_top h2 img {
+  width: 136px;
+  height: 35px;
+}
+footer .inner .foot_top .foot_con a.insta {
+  margin-right: 28px;
+}
+footer .inner .foot_btm {
+  font-size: 11px;
+  padding-top: 80px;
+}
+footer .inner .foot_btm .info_tel{
+  display:none;
+}
+footer .inner .foot_btm .info {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+}
+footer .inner .foot_btm .info a {
+  margin-left: 50px;
+}
+footer .inner .foot_btm .line {
+  border: 1px solid #fff;
+}
+footer .inner .foot_btm .copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+footer .inner .foot_btm .copy address span{
+  margin-left:15px;
+}
+
+
+
+
+/* 배경 */
+
+.header_image {
+  width: 100%;
+  height: 950px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_image > figure {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header_image > figure > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.header_image_word {
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  color: white;
+}
+
+.header_image_word > h2 {
+  font-size: 100px;
+  padding-bottom: 20px;
+}
+
+.header_image_word > p {
+  font-size: 25px;
+  padding-top: 10px;
+}
+/* ///////////////////////////////////////////////////////////////////// */
+@media (max-width: 1440px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition:1s;
+    transform: translateY(0%);
+  }
+  
+  header.active {
+    transform: translateY(-100%);
+  }
+  header .inner {
+    background-color: rgba(35, 64, 42, 0.7);
+    height: 100px;  
+    z-index: 10;
+  }
+  
+  header .inner .inner2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+    
+
+  header .inner .inner2 img {
+    width: 177px;
+    height: 44px;
+  }
+  header .inner .inner2 ul {
+    display: none;
+    color: #fff;
+  }
+  header .inner .inner2 .btn_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:35px;
+  }
+
+
+  header .inner .inner2 .btn_wrap .menu_btn{
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    top:5px;
+    cursor: pointer;
+  }
+  
+  
+  header .inner .inner2 .btn_wrap .menu_btn span{
+    position: absolute;
+    background-color: white;
+    width:100%;
+    left: 0;
+    border: 1px solid white;
+    display: block;
+
+  }
+  header .inner .inner2 .btn_wrap .menu_btn span:nth-of-type(1) {
+    top: 0;
+    
+  }
+  header .inner .inner2 .btn_wrap .menu_btn span:nth-of-type(2) {
+    top: calc(100% - 20px);
+    
+  }
+  header .inner .inner2 .btn_wrap .menu_btn span:nth-of-type(3) {
+    top: calc(100% - 10px);
+    
+  }
+  
+  
+
+
+  header .inner .inner2 .btn_wrap button {
+    margin-right: 0px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    width: 127px;
+    height: 40px;
+  }
+
+  header .inner .inner2 .btn_wrap button.login {
+    width: 73px;
+    height: 41px;
+  }
+
+  header .inner .inner2 .btn_wrap button:nth-child(1) {
+    margin-right: 20px;
+  }
+  header .inner .inner2 .btn_wrap button:hover {
+    background-color: #fff;
+    color: black;
+  }
+
+  .menu_show {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index:-120;
+    height: 0vh;
+    transform: translateY(-200%);
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    flex-direction: column;
+    transition: 1s;
+    pointer-events: none;
+    color:  transparent;
+    /* padding-bottom:250px;
+    padding-top:250px; */
+    position:fixed;
+  }
+  .menu_show > a {
+    font-size: 30px;
+    margin-top:50px;
+    display: block;
+    z-index:-120;
+    transform: inherit;
+  }
+  .menu_show > a:nth-of-type(5){
+    display:none;
+  }
+  .menu_show > a:nth-of-type(6){
+    display:none;
+  }
+  /* 클릭시 보여지는 화면 */
+  .menu_show.active {
+    left: 0;
+    z-index:-1;
+    top: 0;
+    color: white;
+    pointer-events: all;
+    bottom: 0;
+    transform: translateY(0%);
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+  }
+  
+
+
+  
+
+
+  
+
+
+  footer .inner .foot_btm .info_tel{
+    display: block;
+  }
+  footer .inner .info{
+    display:flex !important;
+    justify-content: space-between !important;
+  }
+
+  footer .inner .right{
+    display: none;
+  }
+
+  footer .inner address span:nth-of-type(4){
+    display: none;
+  }
+  footer .inner .foot_btm .copy {
+    padding-top: 30px;
+  }
+
+  footer .inner .foot_btm .copy address{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  footer .inner .foot_btm .copy address span{
+    margin-left:0px;
+  }
+
+  footer .inner .foot_btm .copy address span:nth-of-type(2){
+    margin-left:300px;
+  }
+
+
+  .header_image_word > h2 {
+    font-size: 80px;
+    padding-bottom: 20px;
+  }
+  
+  .header_image_word > p {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+}
+
+
+@media (max-width: 1220px) {
+  footer .inner .foot_btm .copy address span:nth-of-type(2){
+    margin-left:0px;
+  }
+
+ 
+
+}
+
+@media (max-width: 920px) {
+  header .inner .inner2 .reser{
+    display:none;
+  }
+  header .inner .inner2 .login{
+    display:none;
+  }
+  footer .inner  address span:nth-of-type(2){
+    display: none;
+  }
+  footer .inner address span:nth-of-type(3){
+    display: none;
+  }
+  .header_image_word > h2 {
+    font-size: 60px;
+    padding-bottom: 20px;
+  }
+  
+  .header_image_word > p {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+  .menu_show > a:nth-of-type(5){
+    display:block;
+  }
+  .menu_show > a:nth-of-type(6){
+    display:block;
+  }
+
+
+}
+@media (max-width: 820px){
+
+  footer .inner {
+    padding-top: 50px;
+    margin: auto 100px;
+  }
+
+  footer .inner .info .info_tel{
+    display:none;
+  }
+  footer .inner .info .info_contents a:nth-child(3){
+    display:none;
+  }
+  footer .inner .info{
+    display: flex;
+    justify-content: flex-end !important;
+  }
+}
+
+@media (max-width: 480px){
+  header .inner .inner2 img {
+    width: 155px;
+    height: 38px;
+  }
+
+  .header_image_word > h2 {
+    font-size: 45px;
+    padding-bottom: 10px;
+  }
+  
+  .header_image_word > p {
+    font-size: 11px;
+    padding-top: 10px;
+  }
+  .menu_show > a {
+    font-size: 24px;
+  }
+
+
+  .menu_show > a:nth-of-type(5){
+    display:block;
+  }
+  .menu_show > a:nth-of-type(6){
+    display:block;
+  }
+  
+  
+  footer .inner {
+    padding-top: 50px;
+    margin: auto 20px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+button{
+  transition: .2s;
+}
+
+@media (max-width: 1440px) {
+  header#header div.inner2{
+      justify-content: space-between;
+      padding: 0 100px;
+    
+  }
+}
+
+@media (max-width: 950px) {
+  header#header div.inner2{
+    padding: 0 60px;
+  
+}
+  
+}
+
+
