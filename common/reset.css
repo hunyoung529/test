@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff");
+}
+* {
+  font-family: "ChosunGu" !important;
+}
+
 html,
 body,
 div,
@@ -130,6 +138,7 @@ a {
   color: inherit;
 }
 
-img, video {
+img,
+video {
   vertical-align: top;
 }
