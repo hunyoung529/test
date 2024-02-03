@@ -1,0 +1,494 @@
+/* 조선굴림체(한국어) */
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "SUIT-Regular" !important;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  height: 100px;
+  transition: 1s;
+  transform: translateY(0%);
+
+  &.active {
+    transform: translateY(-100%);
+  }
+
+  .inner {
+    width: 100%;
+    background-color: rgba(35, 64, 42, 0.7);
+
+    .inner2 {
+      display: flex;
+      height: 100px;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 180px;
+      margin-right: 180px;
+
+      img {
+        filter: brightness(90%);
+        width: 177px;
+        height: 44px;
+      }
+
+      ul {
+        color: #fff;
+        display: flex;
+        margin-left: 20%;
+
+        li {
+          margin-right: 60px;
+        }
+      }
+
+      .btn_wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+
+        button {
+          cursor: pointer;
+          border: 1px solid #fff;
+          background: transparent;
+          color: #fff;
+          width: 127px;
+          height: 40px;
+        }
+
+        .menu_btn {
+          display: none;
+        }
+
+        button:hover {
+          background-color: #fff;
+          color: black;
+        }
+      }
+    }
+  }
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.menu_show {
+  display: none;
+
+  a {
+    display: none;
+  }
+}
+
+footer {
+  color: #fff;
+  width: 100%;
+  background-color: black;
+  background-size: cover;
+  width: 100%;
+  height: 312px;
+
+  .inner {
+    padding-top: 50px;
+    margin: auto 180px;
+
+    .foot_top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 img {
+        width: 136px;
+        height: 35px;
+      }
+
+      .foot_con a.insta {
+        margin-right: 28px;
+      }
+    }
+
+    .foot_btm {
+      font-size: 11px;
+      padding-top: 80px;
+
+      .info_tel {
+        display: none;
+      }
+
+      .info {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 30px;
+
+        a {
+          margin-left: 50px;
+        }
+      }
+
+      .line {
+        border: 1px solid #fff;
+      }
+
+      .copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+
+        address span {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+/* 배경 */
+
+.header_image {
+  width: 100%;
+  height: 950px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > figure {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
+}
+
+.header_image_word {
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  color: white;
+
+  > {
+    h2 {
+      font-family: "Lora", serif !important;
+      font-size: 100px;
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-size: 25px;
+      padding-top: 10px;
+    }
+  }
+}
+button {
+  transition: 0.2s;
+}
+/* ///////////////////////////////////////////////////////////////////// */
+@media (max-width: 1440px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 1s;
+    transform: translateY(0%);
+
+    &.active {
+      transform: translateY(-100%);
+    }
+
+    .inner {
+      background-color: rgba(35, 64, 42, 0.7);
+      height: 100px;
+      z-index: 10;
+
+      .inner2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+
+        img {
+          width: 177px;
+          height: 44px;
+        }
+
+        ul {
+          display: none;
+          color: #fff;
+        }
+
+        .btn_wrap {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 35px;
+
+          .menu_btn {
+            width: 30px;
+            height: 30px;
+            display: block;
+            position: relative;
+            top: 5px;
+            cursor: pointer;
+
+            span {
+              position: absolute;
+              background-color: white;
+              width: 100%;
+              left: 0;
+              border: 1px solid white;
+              display: block;
+
+              &:nth-of-type(1) {
+                top: 0;
+              }
+
+              &:nth-of-type(2) {
+                top: calc(100% - 20px);
+              }
+
+              &:nth-of-type(3) {
+                top: calc(100% - 10px);
+              }
+            }
+          }
+
+          button {
+            margin-right: 0px;
+            cursor: pointer;
+            border: 1px solid #fff;
+            background: transparent;
+            color: #fff;
+            width: 127px;
+            height: 40px;
+
+            &.login {
+              width: 73px;
+              height: 41px;
+            }
+
+            &:nth-child(1) {
+              margin-right: 20px;
+            }
+
+            &:hover {
+              background-color: #fff;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+  header#header div.inner2 {
+    justify-content: space-between;
+    padding: 0 100px;
+  }
+
+  .menu_show {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -120;
+    height: 0vh;
+    transform: translateY(-200%);
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    flex-direction: column;
+    transition: 1s;
+    pointer-events: none;
+    color: transparent;
+    position: fixed;
+
+    > a {
+      font-size: 30px;
+      margin-top: 50px;
+      display: block;
+      z-index: -120;
+      transform: inherit;
+
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        display: none;
+      }
+    }
+
+    &.active {
+      left: 0;
+      z-index: -1;
+      top: 0;
+      color: white;
+      pointer-events: all;
+      bottom: 0;
+      transform: translateY(0%);
+      width: 100%;
+      background-color: rgb(24, 24, 24);
+    }
+  }
+
+  /* 클릭시 보여지는 화면 */
+
+  footer .inner {
+    .foot_btm .info_tel {
+      display: block;
+    }
+
+    .info {
+      display: flex !important;
+      justify-content: space-between !important;
+    }
+
+    .right,
+    address span:nth-of-type(4) {
+      display: none;
+    }
+
+    .foot_btm .copy {
+      padding-top: 30px;
+
+      address {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        span {
+          margin-left: 0px;
+
+          &:nth-of-type(2) {
+            margin-left: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  .header_image_word > {
+    h2 {
+      font-size: 80px;
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      padding-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  footer .inner .foot_btm .copy address span:nth-of-type(2) {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 950px) {
+  header#header div.inner2 {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 920px) {
+  header .inner .inner2 {
+    .reser,
+    .login {
+      display: none;
+    }
+  }
+
+  footer .inner address span {
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      display: none;
+    }
+  }
+
+  .header_image_word > {
+    h2 {
+      font-size: 60px;
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      padding-top: 10px;
+    }
+  }
+
+  .menu_show > a {
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  footer .inner {
+    padding-top: 50px;
+    margin: auto 100px;
+
+    .info {
+      .info_tel,
+      .info_contents a:nth-child(3) {
+        display: none;
+      }
+
+      display: flex;
+      justify-content: flex-end !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header .inner .inner2 img {
+    width: 155px;
+    height: 38px;
+  }
+
+  .header_image_word > {
+    h2 {
+      font-size: 45px;
+      padding-bottom: 10px;
+    }
+
+    p {
+      font-size: 11px;
+      padding-top: 10px;
+    }
+  }
+
+  .menu_show > a {
+    font-size: 24px;
+
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      display: block;
+    }
+  }
+
+  footer .inner {
+    padding-top: 50px;
+    margin: auto 20px;
+  }
+}

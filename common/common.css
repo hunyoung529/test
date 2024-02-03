@@ -1,3 +1,15 @@
+/* 조선굴림체(한국어) */
+@import url(./reset.css);
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "SUIT-Regular" !important;
+}
 
 header {
   position: fixed;
@@ -25,6 +37,7 @@ header .inner .inner2 {
   margin-right: 180px;
 }
 header .inner .inner2 img {
+  filter: brightness(90%);
   width: 177px;
   height: 44px;
 }
@@ -36,7 +49,6 @@ header .inner .inner2 ul {
 header .inner .inner2 ul li {
   margin-right: 60px;
 }
-
 header .inner .inner2 .btn_wrap {
   display: flex;
   flex-direction: row;
@@ -55,16 +67,19 @@ header .inner .inner2 .btn_wrap button {
 header .inner .inner2 .btn_wrap .menu_btn {
   display: none;
 }
-
 header .inner .inner2 .btn_wrap button:hover {
   background-color: #fff;
   color: black;
 }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .menu_show {
   display: none;
 }
-
 .menu_show a {
   display: none;
 }
@@ -86,7 +101,6 @@ footer .inner .foot_top {
   justify-content: space-between;
   align-items: center;
 }
-
 footer .inner .foot_top h2 img {
   width: 136px;
   height: 35px;
@@ -123,7 +137,6 @@ footer .inner .foot_btm .copy address span {
 }
 
 /* 배경 */
-
 .header_image {
   width: 100%;
   height: 950px;
@@ -132,14 +145,12 @@ footer .inner .foot_btm .copy address span {
   justify-content: center;
   align-items: center;
 }
-
 .header_image > figure {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   position: relative;
 }
-
 .header_image > figure > img {
   object-fit: cover;
   width: 100%;
@@ -153,16 +164,20 @@ footer .inner .foot_btm .copy address span {
   text-align: center;
   color: white;
 }
-
 .header_image_word > h2 {
+  font-family: "Lora", serif !important;
   font-size: 100px;
   padding-bottom: 20px;
 }
-
 .header_image_word > p {
   font-size: 25px;
   padding-top: 10px;
 }
+
+button {
+  transition: 0.2s;
+}
+
 /* ///////////////////////////////////////////////////////////////////// */
 @media (max-width: 1440px) {
   header {
@@ -172,7 +187,6 @@ footer .inner .foot_btm .copy address span {
     transition: 1s;
     transform: translateY(0%);
   }
-
   header.active {
     transform: translateY(-100%);
   }
@@ -181,14 +195,12 @@ footer .inner .foot_btm .copy address span {
     height: 100px;
     z-index: 10;
   }
-
   header .inner .inner2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 0;
   }
-
   header .inner .inner2 img {
     width: 177px;
     height: 44px;
@@ -204,7 +216,6 @@ footer .inner .foot_btm .copy address span {
     align-items: center;
     gap: 35px;
   }
-
   header .inner .inner2 .btn_wrap .menu_btn {
     width: 30px;
     height: 30px;
@@ -213,7 +224,6 @@ footer .inner .foot_btm .copy address span {
     top: 5px;
     cursor: pointer;
   }
-
   header .inner .inner2 .btn_wrap .menu_btn span {
     position: absolute;
     background-color: white;
@@ -231,7 +241,6 @@ footer .inner .foot_btm .copy address span {
   header .inner .inner2 .btn_wrap .menu_btn span:nth-of-type(3) {
     top: calc(100% - 10px);
   }
-
   header .inner .inner2 .btn_wrap button {
     margin-right: 0px;
     cursor: pointer;
@@ -241,12 +250,10 @@ footer .inner .foot_btm .copy address span {
     width: 127px;
     height: 40px;
   }
-
   header .inner .inner2 .btn_wrap button.login {
     width: 73px;
     height: 41px;
   }
-
   header .inner .inner2 .btn_wrap button:nth-child(1) {
     margin-right: 20px;
   }
@@ -254,7 +261,10 @@ footer .inner .foot_btm .copy address span {
     background-color: #fff;
     color: black;
   }
-
+  header#header div.inner2 {
+    justify-content: space-between;
+    padding: 0 100px;
+  }
   .menu_show {
     left: 0;
     top: 0;
@@ -270,8 +280,6 @@ footer .inner .foot_btm .copy address span {
     transition: 1s;
     pointer-events: none;
     color: transparent;
-    /* padding-bottom:250px;
-    padding-top:250px; */
     position: fixed;
   }
   .menu_show > a {
@@ -281,13 +289,10 @@ footer .inner .foot_btm .copy address span {
     z-index: -120;
     transform: inherit;
   }
-  .menu_show > a:nth-of-type(5) {
-    display: none;
-  }
+  .menu_show > a:nth-of-type(5),
   .menu_show > a:nth-of-type(6) {
     display: none;
   }
-  /* 클릭시 보여지는 화면 */
   .menu_show.active {
     left: 0;
     z-index: -1;
@@ -299,7 +304,7 @@ footer .inner .foot_btm .copy address span {
     width: 100%;
     background-color: rgb(24, 24, 24);
   }
-
+  /* 클릭시 보여지는 화면 */
   footer .inner .foot_btm .info_tel {
     display: block;
   }
@@ -307,59 +312,49 @@ footer .inner .foot_btm .copy address span {
     display: flex !important;
     justify-content: space-between !important;
   }
-
-  footer .inner .right {
-    display: none;
-  }
-
+  footer .inner .right,
   footer .inner address span:nth-of-type(4) {
     display: none;
   }
   footer .inner .foot_btm .copy {
     padding-top: 30px;
   }
-
   footer .inner .foot_btm .copy address {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
-
   footer .inner .foot_btm .copy address span {
     margin-left: 0px;
   }
-
   footer .inner .foot_btm .copy address span:nth-of-type(2) {
     margin-left: 300px;
   }
-
   .header_image_word > h2 {
     font-size: 80px;
     padding-bottom: 20px;
   }
-
   .header_image_word > p {
     font-size: 20px;
     padding-top: 10px;
   }
 }
-
 @media (max-width: 1220px) {
   footer .inner .foot_btm .copy address span:nth-of-type(2) {
     margin-left: 0px;
   }
 }
-
-@media (max-width: 920px) {
-  header .inner .inner2 .reser {
-    display: none;
+@media (max-width: 950px) {
+  header#header div.inner2 {
+    padding: 0 60px;
   }
+}
+@media (max-width: 920px) {
+  header .inner .inner2 .reser,
   header .inner .inner2 .login {
     display: none;
   }
-  footer .inner address span:nth-of-type(2) {
-    display: none;
-  }
+  footer .inner address span:nth-of-type(2),
   footer .inner address span:nth-of-type(3) {
     display: none;
   }
@@ -367,14 +362,11 @@ footer .inner .foot_btm .copy address span {
     font-size: 60px;
     padding-bottom: 20px;
   }
-
   .header_image_word > p {
     font-size: 15px;
     padding-top: 10px;
   }
-  .menu_show > a:nth-of-type(5) {
-    display: block;
-  }
+  .menu_show > a:nth-of-type(5),
   .menu_show > a:nth-of-type(6) {
     display: block;
   }
@@ -384,30 +376,24 @@ footer .inner .foot_btm .copy address span {
     padding-top: 50px;
     margin: auto 100px;
   }
-
-  footer .inner .info .info_tel {
-    display: none;
-  }
-  footer .inner .info .info_contents a:nth-child(3) {
-    display: none;
-  }
   footer .inner .info {
     display: flex;
     justify-content: flex-end !important;
   }
+  footer .inner .info .info_tel,
+  footer .inner .info .info_contents a:nth-child(3) {
+    display: none;
+  }
 }
-
 @media (max-width: 480px) {
   header .inner .inner2 img {
     width: 155px;
     height: 38px;
   }
-
   .header_image_word > h2 {
     font-size: 45px;
     padding-bottom: 10px;
   }
-
   .header_image_word > p {
     font-size: 11px;
     padding-top: 10px;
@@ -415,33 +401,12 @@ footer .inner .foot_btm .copy address span {
   .menu_show > a {
     font-size: 24px;
   }
-
-  .menu_show > a:nth-of-type(5) {
-    display: block;
-  }
+  .menu_show > a:nth-of-type(5),
   .menu_show > a:nth-of-type(6) {
     display: block;
   }
-
   footer .inner {
     padding-top: 50px;
     margin: auto 20px;
-  }
-}
-
-button {
-  transition: 0.2s;
-}
-
-@media (max-width: 1440px) {
-  header#header div.inner2 {
-    justify-content: space-between;
-    padding: 0 100px;
-  }
-}
-
-@media (max-width: 950px) {
-  header#header div.inner2 {
-    padding: 0 60px;
   }
 }
