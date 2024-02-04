@@ -1112,7 +1112,7 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
   position: relative;
   width: min(90rem, 90%);
   margin: 0 auto;
-  min-height: 70vh;
+  min-height: 35vh;
   column-gap: 3rem;
   padding-block: min(20vh, 3rem);
 }

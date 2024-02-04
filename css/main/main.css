@@ -65,7 +65,8 @@ main .modal-overlay .wrap .bot_top .right {
   right: 10px;
   top: 10%;
 }
-main .modal-overlay .wrap .bot_top .right a.set img, main .modal-overlay .wrap .bot_top .right a.close img {
+main .modal-overlay .wrap .bot_top .right a.set img,
+main .modal-overlay .wrap .bot_top .right a.close img {
   width: 20px;
   height: 20px;
 }
@@ -422,6 +423,7 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
 .main_sec2 .main_sec2_info .main_sec2_wrap .total_adult_num,
 .main_sec2 .main_sec2_info .main_sec2_wrap .total_children_num {
   cursor: pointer;
+  white-space: nowrap;
 }
 .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_room {
   display: flex;
@@ -434,6 +436,11 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   font-family: inherit;
   font-size: inherit;
   color: #eff299;
+  border: 1px solid #eff298;
+}
+.main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_room .select_room:hover {
+  background-color: #eff298;
+  color: #23402a;
 }
 .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_num {
   display: flex;
@@ -451,7 +458,18 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   background: none;
   color: #eff299;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_num div input::-webkit-outer-spin-button, .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_num div input::-webkit-inner-spin-button {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .main_sec2_num
+  div
+  input::-webkit-outer-spin-button,
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .main_sec2_num
+  div
+  input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -494,14 +512,24 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   justify-content: center;
   align-items: center;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .btn_close {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .btn_close {
   position: absolute;
   right: 15px;
   top: 10px;
   cursor: pointer;
   display: block;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .btn_confirm {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .btn_confirm {
   border-radius: 5px;
   width: 50px;
   height: 30px;
@@ -511,7 +539,12 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   bottom: 20px;
   right: 15px;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .btn_close::after {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .btn_close::after {
   content: "×";
   display: inline-block;
   font-size: 2.1875rem;
@@ -521,7 +554,14 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   width: 255px;
   height: 100%;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .rooms ul li {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .rooms
+  ul
+  li {
   color: black;
   border: 1px solid #23402a;
   width: 255px;
@@ -533,14 +573,34 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   margin-bottom: 10px;
   cursor: pointer;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .rooms ul li p:last-child {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .rooms
+  ul
+  li
+  p:last-child {
   margin-top: 5px;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .rooms ul li.active {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .rooms
+  ul
+  li.active {
   background-color: #23402a;
   color: #eff299;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap {
   color: black;
   background-color: white;
   height: 435px;
@@ -548,33 +608,98 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   margin: 0 20px 0;
   border-radius: 5px;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar {
   text-align: center;
   width: 100%;
   height: 100%;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar thead .cal_move {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  thead
+  .cal_move {
   cursor: pointer;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar thead tr:first-child {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  thead
+  tr:first-child {
   vertical-align: top;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar t td {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  t
+  td {
   vertical-align: middle;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar thead tr:first-child td {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  thead
+  tr:first-child
+  td {
   font-family: inherit;
   font-size: 1.1em;
   font-weight: bold;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar thead:first-child {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  thead:first-child {
   height: 100px;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar thead tr:last-child td {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  thead
+  tr:last-child
+  td {
   font-family: inherit;
   font-weight: 600;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar t tr td p {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  t
+  tr
+  td
+  p {
   font-family: inherit;
   height: 45px;
   width: 45px;
@@ -585,37 +710,98 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   display: block;
   text-align: center;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar .pastDay {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  .pastDay {
   color: lightgray !important;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar .today {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  .today {
   background-color: #d9d9d9;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar .futureDay {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  .futureDay {
   background-color: #ffffff;
   cursor: pointer;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar .futureDay.highlight {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  .futureDay.highlight {
   background: #23402a !important;
   color: #eff299;
   font-weight: 600;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar .futureDay:hover {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  .futureDay:hover {
   background: #23402a;
   color: #eff299;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar .futureDay.choiceDay, .main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .cal_wrap table.Calendar .futureDay.today.choiceDay {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  .futureDay.choiceDay,
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .cal_wrap
+  table.Calendar
+  .futureDay.today.choiceDay {
   color: #eff299;
   cursor: pointer;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num {
   width: 255px;
   height: 100%;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room {
   padding: 0 5px 0;
   opacity: 0;
   width: 100%;
@@ -627,7 +813,14 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   justify-content: space-around;
   align-items: center;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room input {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room
+  input {
   width: 50px;
   text-align: center;
   background: none;
@@ -635,22 +828,71 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   font-family: inherit;
   color: #23402a;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room input:focus {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room
+  input:focus {
   outline: none;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room input[type=number]::-webkit-inner-spin-button, .main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room input[type=number]::-webkit-outer-spin-button {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room
+  input[type="number"]::-webkit-inner-spin-button,
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room
+  input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room div {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room
+  div {
   display: flex;
   border-bottom: 1px solid #23402a;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room .num_plus,
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room .num_minus {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room
+  .num_plus,
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room
+  .num_minus {
   cursor: pointer;
 }
-.main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .select_num .room.active {
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
+  .room.active {
   opacity: 1;
 }
 .main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content.active {
@@ -703,6 +945,16 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap {
   align-items: center;
   justify-content: space-between;
 }
+
+main .main_sec2 .main_sec2_info .main_sec2_wrap .btn_search {
+  color: #eff299;
+  border: 1px solid #eff298;
+  padding: 10px;
+}
+main .main_sec2 .main_sec2_info .main_sec2_wrap .btn_search:hover {
+  background-color: #eff298;
+  color: #23402a;
+}
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_room p {
   margin-bottom: 10px;
 }
@@ -722,14 +974,11 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_num .sch {
   height: 41px;
   display: block;
 }
-main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal {
-  /* Weekday Heading */
-}
+
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal label {
   font-size: 18px;
   margin-bottom: 10px;
   display: block;
-  /* text-align: left; */
 }
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal input {
   border: none;
@@ -749,7 +998,12 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal input:focus {
   border: 1px solid #ffa000 !important;
   outline-width: 0;
 }
-main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .daterangepicker {
+main
+  .main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .main_sec2_cal
+  .daterangepicker {
   position: absolute;
   top: 775px !important;
   left: 437.828px !important;
@@ -761,7 +1015,13 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .daterangepicker 
   align-content: center !important;
   padding: 0 !important;
 }
-main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal thead tr:nth-child(2) {
+main
+  .main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .main_sec2_cal
+  thead
+  tr:nth-child(2) {
   color: #bdbdbd !important;
 }
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal ttr td {
@@ -774,7 +1034,12 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .month {
 }
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .start-date,
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .end-date,
-main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .available:hover {
+main
+  .main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .main_sec2_cal
+  .available:hover {
   border-radius: 0px !important;
 }
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .off {
@@ -861,7 +1126,7 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
   position: relative;
   width: min(90rem, 90%);
   margin: 0 auto;
-  min-height: 70vh;
+  min-height: 40vh;
   column-gap: 3rem;
   padding-block: min(20vh, 3rem);
 }
@@ -975,25 +1240,32 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
   z-index: 0;
 }
 .swiper .swiper-wrapper .swiper-slide--one {
-  background: var(--gradient), url("../../sub/img/room/img_standardSingleA1.jpg") no-repeat 50% 50%/cover;
+  background: var(--gradient),
+    url("../../sub/img/room/img_standardSingleA1.jpg") no-repeat 50% 50% / cover;
 }
 .swiper .swiper-wrapper .swiper-slide--two {
-  background: var(--gradient), url("../../sub/img/room/img_standardSingleB1.jpg") no-repeat 50% 50%/cover;
+  background: var(--gradient),
+    url("../../sub/img/room/img_standardSingleB1.jpg") no-repeat 50% 50% / cover;
 }
 .swiper .swiper-wrapper .swiper-slide--three {
-  background: var(--gradient), url("../../sub/img/room/img_singleC1.jpg") no-repeat 50% 50%/cover;
+  background: var(--gradient),
+    url("../../sub/img/room/img_singleC1.jpg") no-repeat 50% 50% / cover;
 }
 .swiper .swiper-wrapper .swiper-slide--four {
-  background: var(--gradient), url("../../sub/img/room/img_standardCoupleA1.jpg") no-repeat 50% 50%/cover;
+  background: var(--gradient),
+    url("../../sub/img/room/img_standardCoupleA1.jpg") no-repeat 50% 50% / cover;
 }
 .swiper .swiper-wrapper .swiper-slide--five {
-  background: var(--gradient), url("../../sub/img/room/img_coupleB1.jpg") no-repeat 50% 50%/cover;
+  background: var(--gradient),
+    url("../../sub/img/room/img_coupleB1.jpg") no-repeat 50% 50% / cover;
 }
 .swiper .swiper-wrapper .swiper-slide--six {
-  background: var(--gradient), url("../../sub/img/room/img_deluxeSingle1.jpg") no-repeat 50% 50%/cover;
+  background: var(--gradient),
+    url("../../sub/img/room/img_deluxeSingle1.jpg") no-repeat 50% 50% / cover;
 }
 .swiper .swiper-wrapper .swiper-slide--seven {
-  background: var(--gradient), url("../../sub/img/room/img_deluxeCouple1.jpg") no-repeat 50% 50%/cover;
+  background: var(--gradient),
+    url("../../sub/img/room/img_deluxeCouple1.jpg") no-repeat 50% 50% / cover;
 }
 
 .main_sec1 .swiper-slide::before {
@@ -1230,7 +1502,7 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
 
 .main_sec3 {
   position: relative;
-  height: 80vh;
+  height: 50vh;
   margin-top: 40px;
 }
 
