@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.checkRes {
+  font-family: "ChosunGu";
+  line-height: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 183px;
+}
+.checkRes .checkRes_head .checkRes_head_inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 11px solid #23402A;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.checkRes .checkRes_head .checkRes_head_inner a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 80px;
+}
+.checkRes .checkRes_head .checkRes_head_inner h2 {
+  color: #000;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 80px;
+}
+.checkRes .checkRes_head .checkRes_head_inner a img {
+  width: 84px;
+}
+.checkRes .checkRes_body {
+  width: 60%;
+  margin: 70px auto 0 auto;
+  border: 1px solid #23402A;
+  border-top: 3px solid #23402A;
+}
+.checkRes .checkRes_body .checkRes_body_inner {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.checkRes .checkRes_body .checkRes_body_inner figure img {
+  width: 63px;
+  transform: translateY(47%);
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top {
+  width: 100%;
+  /* height: 271px; */
+  border-radius: 8px;
+  border: 1px solid #23402A;
+  padding: 50px 0;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top div {
+  margin: 0 36px;
+  color: #23402A;
+  font-size: 11px;
+  font-weight: 400;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top div p, .checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top div b, .checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top div h3 {
+  margin: 3px 0;
+  line-height: 20px;
+  font-weight: 500;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top .top_personal {
+  margin-bottom: 15px;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top .top_personal h2{
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top .top_res_info {
+  border-top: 1px solid #23402A;
+  border-bottom: 1px solid #23402A;
+  padding: 15px 0;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top .top_res_info b {
+  font-weight: 600;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top .top_res_info b span {
+  font-weight: 500;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top .top_totalfee {
+  margin-top: 15px;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_top .top_totalfee h3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_bot {
+  width: 100%;
+  height: 59px;
+  margin-top: 45px;
+  background: #23402A;
+  border: 1px solid #23402A;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_bot button {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-family: "ChosunGu";
+  display: flex;
+  align-items: center;
+}
+.checkRes .checkRes_body .checkRes_body_inner .checkRes_body_bot button span{
+  margin-right: 5px; 
+}/*# sourceMappingURL=checkReservation.css.map */

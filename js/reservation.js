@@ -1,92 +1,7 @@
 $(document).ready(function () {
-  // $.get("./common/mainCommon.html", function (data) {
-  //   var headerContent = $(data).filter("header").html();
-  //   var footerContent = $(data).filter("footer").html();
-
-  //   headerContent = headerContent.replace(
-  //     '"../common/img/wh_logo.PNG',
-  //     '"./common/img/wh_logo.PNG'
-  //   );
-  //   footerContent = footerContent.replace(
-  //     '"../common/img/wh_logo.PNG',
-  //     '"./common/img/wh_logo.PNG'
-  //   );
-
-  //   $("header").html(headerContent);
-  //   $("footer").html(footerContent);
-  // });
+ 
 
   // 슬라이딩 컨텐츠 펼치기
-
-  $(function () {
-    $(".btt").click(function () {
-      $(".modal-window").toggleClass("on"); //id가 "followModal"인 모달창을 열어준다.
-      // $('.modal-title').text("팔로우");    //modal 의 header 부분에 "팔로우"라는 값을 넣어준다.
-    });
-
-    $('input[name="daterange"]').daterangepicker({
-      opens: "center",
-      locale: {
-        minDate: 0,
-      },
-    });
-
-    $(".new_m").click(function () {
-      $(".cont_reser").addClass("on"); //id가 "followModal"인 모달창을 열어준다.
-      $(".cont_center").addClass("on"); //id가 "followModal"인 모달창을 열어준다.
-    });
-
-    $(".prev").click(function () {
-      $(".cont_center").removeClass("on"); //id가 "followModal"인 모달창을 열어준다.
-      $(".cont_reser").removeClass("on"); //id가 "followModal"인 모달창을 열어준다.
-    });
-
-    $(".close").click(function () {
-      $(".modal-window").toggleClass("on");
-    });
-
-    AOS.init();
-  });
-
-  var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 3,
-      slideShadows: true,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    mousewheel: {
-      thresholdDelta: 70,
-    },
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 1,
-      },
-      1024: {
-        slidesPerView: 2,
-      },
-      1560: {
-        slidesPerView: 2,
-      },
-    },
-  });
-
   $(
     " .select_room,.select_date,.total_room_num,.total_adult_num,.total_children_num,.check_room figure img"
   ).click(function () {
@@ -420,92 +335,104 @@ $(document).ready(function () {
     $(".sliding_dim").removeClass("active");
   });
 
-  const elBtn = document.querySelector(".more_btn");
-  const textBox = document.querySelector(".text_box");
-  const imgBox = document.querySelector(".img_box");
-  const acorImg = document.querySelector(".acor_wrap");
-  const btnClose = document.querySelector(".acor_wrap .btn_close");
+  if (window.location.pathname.endsWith("reservation.html")) {
+    var totalChildrenNum = sessionStorage.getItem("totalChildrenNum") || 0;
+    var startDate = sessionStorage.getItem("startDate") || formattedDate;
+    var endDate = sessionStorage.getItem("endDate") || formattedDate;
+    var totalAdultNum = sessionStorage.getItem("totalAdultNum") || 0;
+    var totalRoomNum = sessionStorage.getItem("totalRoomNum") || 0;
 
-  elBtn.addEventListener("click", function () {
-    imgBox.classList.add("deactive");
-    textBox.classList.add("deactive");
-    acorImg.classList.remove("deactive");
-    btnClose.style.display = "block";
-  });
+    // 가져온 값들을 요소에 삽입
+    $(".total_children_num p").text(totalChildrenNum);
+    $(".start_date").text(startDate);
+    $(".end_date").text(endDate);
+    $(".total_adult_num p").text(totalAdultNum);
+    $(".total_room_num p").text(totalRoomNum);
 
-  btnClose.addEventListener("click", function () {
-    imgBox.classList.remove("deactive");
-    textBox.classList.remove("deactive");
-    acorImg.classList.add("deactive");
-    btnClose.style.display = "none";
-  });
-  const acorImages = document.querySelectorAll(".acor_img");
+    var reserRoomInfo = JSON.parse(sessionStorage.getItem("reserRoomInfo"));
 
-  acorImages.forEach((acorImg) => {
-    const figDesc = acorImg.querySelector(".sec2_desc");
+    if (reserRoomInfo) {
+      var jsonDataPath = "../db/reser_data.json";
+      var boxWrap = $(".box_wrap");
 
-    acorImg.addEventListener("mouseover", function () {
-      acorImg.style.flex = "7";
-      setTimeout(function () {
-        figDesc.classList.add("on");
-      }, 700);
-    });
+      $(".box_wrap").empty();
 
-    acorImg.addEventListener("mouseout", function () {
-      figDesc.classList.remove("on");
-      acorImg.style.flex = "1";
-    });
-  });
-
-  // 이미지 자동 변경
-  const content = [
-    {
-      image: "./main/img/main_sec2_img1.jpg",
-      title: "다이닝 룸",
-      text: "다이닝은 신선하고 고급스러운 재료로 만든 다양한 요리를 제공합니다. 메뉴는 매일 바뀌며, 계절에 따라 제철 식재료를 사용합니다.다이닝은 제주 숲을 감상할 수 있는 아름다운 공간으로,편안하고 여유로운 분위기에서 식사를 즐길 수 있습니다.",
-    },
-    {
-      image: "./main/img/main_sec2_img2.jpg",
-      title: "공용주방",
-      text: " 공용 주방은 투숙객들이 함께 요리하고 식사할 수 있는 공간입니다. 주방에는 다양한 조리기구와 식기류가 구비되어 있어 편리하게 이용할 수 있습니다.공용 주방은 예약제로 운영되며 예약은 프런트 데스크에서 할 수 있습니다. 이용 시간은 오전 10시부터 오전 0시까지입니다.",
-    },
-
-    {
-      image: "./main/img/main_sec2_img3.jpg",
-      title: "반려동물 운동장",
-      text: "라이온힐에 머무시는 동안 반려동물들이 마음껏 뛰어놀 수있는 공간입니다.",
-    },
-
-    {
-      image: "./main/img/main_sec2_img4.jpg",
-      title: "피트니스 센터",
-      text: "최신 운동기구와 편안한 공간을 제공합니다.머무는 동안 피트니스 센터를 이용하여 건강하고 활기찬 휴식을 즐겨보세요. 이용 시간은 오전 6시부터 오후 8시까지입니다.",
-    },
-
-    {
-      image: "./main/img/main_sec2_img5.jpg",
-      title: "수영장",
-      text: "각 객실별로 프라이빗 온수 풀이 있습니다.아름다운 제주 숲을 만끽하며 수영할 수 있습니다.",
-    },
-  ];
-
-  let currentIndex = -1;
-  const changingImage = document.getElementById("changingImage");
-  const changingTitle = document.getElementById("changingTitle");
-  const changingText = document.getElementById("changingText");
-
-  function changeContent() {
-    currentIndex = (currentIndex + 1) % content.length;
-    changingImage.onload = function () {
-      changingTitle.textContent = content[currentIndex].title;
-      changingText.textContent = content[currentIndex].text;
-    };
-    changingImage.src = content[currentIndex].image;
+      for (var i = 0; i < reserRoomInfo.length; i++) {
+        (function (roomInfo) {
+          var roomInfo = reserRoomInfo[i];
+          var roomName = roomInfo.roomName;
+          var adultNumber = roomInfo.adultNumber;
+          console.log(adultNumber);
+          $.getJSON(jsonDataPath, function (data) {
+            var selectedRoom = data.find((room) => room.room_name === roomName);
+            if (selectedRoom) {
+              var roomHtml = `
+              <div class="room_info">
+              <div class="left_box">
+                  <figure><img src="${selectedRoom.image}" alt="${selectedRoom.room_name}">
+                  <figcaption class="mo_only">${selectedRoom.room_name}</figcaption></figure>
+                  <div class="text_box">
+                      <h2 class="room_name title2 pc_only">${selectedRoom.room_name}</h2>
+                      <p class="capability pc_only">${selectedRoom.capability}</p>
+                      <p class="size pc_only">${selectedRoom.size}</p>
+                  </div>
+              </div>
+              <div class="right_box">
+                  <div class="quantity">
+                  <div class="wrap_num">
+                    <div class="adult_quantity">
+                        <label for="adultInput">어른</label>
+                        <input type="text" id="adultInput" value=" ${roomInfo.adultNumber}명" readonly>
+                        </div>
+                    <div class="children_quantity">
+                        <label for="childrenInput">아동</label>
+                        <input type="text" id="childrenInput" value=" ${roomInfo.childrenNumber}명" readonly>
+                        </div>
+                  </div>
+              </div>
+              <div class="room_select">
+                  <button class="select">선택</button>
+                  <p><span>${selectedRoom.price}</span></p>
+              </div>
+          </div>
+                `;
+              boxWrap.append(roomHtml);
+            }
+          });
+        })(reserRoomInfo[i]);
+      }
+    }
   }
 
-  changeContent();
+  var currentPageURL = window.location.href;
 
-  setInterval(changeContent, 5000);
+  // 현재 페이지가 reservation.html인지 확인합니다.
+  if (currentPageURL.indexOf("reservation.html") !== -1) {
+    // 세션스토리지의 특정 키가 있는지 확인합니다.
+    var keys = [
+      "totalRoomNum",
+      "totalChildrenNum",
+      "totalAdultNum",
+      "startDate",
+      "endDate",
+      "reserRoomInfo",
+    ];
+    var keyExists = keys.some((key) => sessionStorage.getItem(key) !== null);
+
+    if (keyExists) {
+      // 페이지를 벗어나거나 새로고침 할 때
+      $(window).on("beforeunload", function () {
+        // 경고문 띄우기
+        var warningMessage = "정말로 페이지를 벗어나시겠습니까?";
+        return warningMessage;
+      });
+
+      $(window).on("unload", function () {
+        // 세션스토리지의 특정 키를 삭제
+        keys.forEach((key) => sessionStorage.removeItem(key));
+      });
+    }
+  }
 });
 
 let nowMonth = new Date(); // 현재 달을 페이지를 로드한 날의 달로 초기화
@@ -683,63 +610,130 @@ function choiceDate(nowColumn) {
   }
 }
 
-const content = [
-  {
-    image: "../main/img/main_sec2_img1.jpg",
-    title: "다이닝 룸",
-    text: "다이닝은 신선하고 고급스러운 재료로 만든 다양한 요리를 제공합니다. 메뉴는 매일 바뀌며, 계절에 따라 제철 식재료를 사용합니다.다이닝은 제주 숲을 감상할 수 있는 아름다운 공간으로,편안하고 여유로운 분위기에서 식사를 즐길 수 있습니다.",
-  },
-  {
-    image: "../main/img/main_sec2_img2.jpg",
-    title: "공용주방",
-    text: " 공용 주방은 투숙객들이 함께 요리하고 식사할 수 있는 공간입니다. 주방에는 다양한 조리기구와 식기류가 구비되어 있어 편리하게 이용할 수 있습니다.공용 주방은 예약제로 운영되며 예약은 프런트 데스크에서 할 수 있습니다. 이용 시간은 오전 10시부터 오전 0시까지입니다.",
-  },
 
-  {
-    image: "../main/img/main_sec2_img4.jpg",
-    title: "반려동물 운동장",
-    text: "라이온힐에 머무시는 동안 반려동물들이 마음껏 뛰어놀 수있는 공간입니다.",
-  },
+//========결제버튼 클릭시 기존 회원정보에 예약정보 추가하기========
 
-  {
-    image: "../main/img/main_sec2_img2.jpg",
-    title: "피트니스 센터",
-    text: "최신 운동기구와 편안한 공간을 제공합니다.머무는 동안 피트니스 센터를 이용하여 건강하고 활기찬 휴식을 즐겨보세요. 이용 시간은 오전 6시부터 오후 8시까지입니다.",
-  },
+// 예약 정보를 추가하는 함수
+function addReservationInfo(user, commonInfo) {
+  // 총 금액 추가하기
+  var totalAmountText = $(".grand_total span").text();
+  var totalAmount = parseFloat(totalAmountText.replace("총 금액: ", "").replace(/,/g, ""));
+  user.totalAmount = totalAmount;
 
-  {
-    image: "../main/img/main_sec2_img5.jpg",
-    title: "수영장",
-    text: "각 객실별로 프라이빗 온수 풀이 있습니다.아름다운 제주 숲을 만끽하며 수영할 수 있습니다.",
-  },
+  // 체크인/아웃 날짜 추가
+  var checkinDateText = $(".select_date .start_date").text();
+  var checkoutDateText = $(".select_date .end_date").text();
+  user.checkinDateText = checkinDateText;
+  user.checkoutDateText = checkoutDateText;
 
-  // 추가적인 컨텐츠 객체들을 여기에 추가하세요
-];
+  // 어른 인원수 추가
+  var adultCountText = $(".total_adult_num p").text();
+  var adultCount = parseInt(adultCountText.replace("어른 ", ""));
+  user.adultCount = adultCount;
 
-let currentIndex = -1;
-const changingImage = document.getElementById("changingImage");
-const changingTitle = document.getElementById("changingTitle");
-const changingText = document.getElementById("changingText");
+  // 아동 인원수 추가
+  var childrenCountText = $(".total_children_num p").text();
+  var childrenCount = parseInt(childrenCountText.replace("아동 ", ""));
+  user.childrenCount = childrenCount;
 
-function changeContent() {
-  currentIndex = (currentIndex + 1) % content.length;
-  changingImage.onload = function () {
-    changingTitle.textContent = content[currentIndex].title;
-    changingText.textContent = content[currentIndex].text;
-
-    // 새 이미지의 로드 과정을 시작하기 위해 src를 다시 설정합니다.
-    changingImage.src = content[currentIndex].image;
-    changingText.src = content[currentIndex].text;
-    changingTitle.src = content[currentIndex].title;
-  };
-  // 이미지 로드 과정을 시작하기 위해 src를 설정합니다.
-  changingImage.src = content[currentIndex].image;
-  changingText.src = content[currentIndex].text;
-  changingTitle.src = content[currentIndex].title;
+  // 방 이름 추가, 2개 이상일때 사이에 ,넣기
+  var RoomTitleText = document.querySelectorAll(".room_name.title2");
+  var RoomTitles = Array.from(RoomTitleText).map(e => e.textContent).join(", ");
+  user.RoomTitleText = RoomTitles;
 }
 
-// 초기 이미지를 표시하기 위해 changeContent 함수를 즉시 한 번 호출합니다
-changeContent();
+document.getElementById('payBtn').addEventListener('click', function () {
+  // 로컬 정보 불러옴
+  const storedLocalData = localStorage.getItem('userInfos');
+  // 기존 데이터가 없으면 빈 배열로 초기화
+  const userList = storedLocalData ? JSON.parse(storedLocalData) : [];
 
-// 5초마다 컨텐츠 변경
-setInterval(changeContent, 5000);
+  // 세션 스토리지에서 현재 사용자 정보 가져오기
+  const sessionData = sessionStorage.getItem('user');
+  const sessionUser = sessionData ? JSON.parse(sessionData) : null;
+
+  //예약번호 생성
+  function generateLHNumber() {
+    const today = new Date();
+    const yy = today.getFullYear().toString().slice(-2); 
+    const mm = (today.getMonth() + 1).toString().padStart(2, '0');
+    const dd = today.getDate().toString().padStart(2, '0'); 
+    const last5Digits = (today.getTime() + '').slice(-5);
+    const LHtoday = `LH${yy}${mm}${dd}${last5Digits}`;
+    return LHtoday;
+  }
+  const yourLHNum = generateLHNumber();
+
+  if (sessionUser) {
+    const userToUpdate = userList.find(user => user.email === sessionUser.email);
+      // 세션 스토리지에 있는 이메일과 일치하는 유저 찾기
+
+      if (userToUpdate) {//로그인중인 회원
+        addReservationInfo(userToUpdate, {});
+        // 로컬에 업데이트된 데이터 저장
+        const updatedData = JSON.stringify(userList);
+        localStorage.setItem('userInfos', updatedData);
+          //회원 예약완료
+          alert('예약이 완료 되었습니다.');
+        }
+  }else {//세션값 없음 = 로그인 중이 아님 => 비회원 예약
+    const nonMemberInfo = {
+      email: 'none',
+      name: '비회원', 
+      yourLHNum: yourLHNum
+    };
+    // 로컬 스토리지에서 기존 데이터 가져오기
+    const storedLocalData = localStorage.getItem('userInfos');
+    const userList = storedLocalData ? JSON.parse(storedLocalData) : [];
+
+    // 새로운 비회원 정보를 목록에 추가
+    userList.push(nonMemberInfo);
+    // 공통 정보를 추가
+    addReservationInfo(nonMemberInfo, {});
+
+    // 로컬 스토리지에 업데이트된 데이터 저장
+    const nonMemberUpdatedData = JSON.stringify(userList);
+    localStorage.setItem('userInfos', nonMemberUpdatedData);
+
+    alert('비회원으로 예약되었습니다. 예약 번호를 잘 보관해 주세요.');
+    
+    //비회원도 확인창에서 예약정보 볼수있게 세션에 값 보내기 
+    sessionStorage.setItem('nonMemberLHNum', yourLHNum);
+    // 예약 확인창으로 보내기
+    window.location.href = '../sub/checkReservation.html';
+  }
+  
+  //예약번호 로컬에 저장
+  alert(`예약번호는 ${yourLHNum}입니다.`);
+  const userToUpdate = userList.find(user => user.email === sessionUser.email);
+  userToUpdate.yourLHNum = yourLHNum;
+  const updatedData = JSON.stringify(userList);
+  localStorage.setItem('userInfos', updatedData);
+
+  //예약 확인창으로 보내기
+  window.location.href = '../sub/checkReservation.html';
+})//end payBtn
+
+document.getElementById('checkMove').addEventListener('click',function(){
+  // 세션에서 로그인정보(key:user)값을 가져옴
+  var userSession = sessionStorage.getItem('user');
+
+  // "user" 키가 세션에 존재하는 경우
+  if (userSession !== null) {//로그인중임
+    window.location.href = '../sub/checkReservation.html';
+  } else {//비회원임
+    window.location.href = '../sub/checkCustomer.html';
+  }
+})
+
+//비로그인 상태로 접속시 회원가입 유도하기
+window.addEventListener('load', function() {
+  const sessionData = sessionStorage.getItem('user');
+  if (!sessionData) {
+      alert('로그인 상태가 아닙니다. \n로그인을 하시면 예약 내역을 더 편리하게 확인하실 수 있습니다.');
+  }
+});
+
+
+
+

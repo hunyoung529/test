@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
+* {
+  box-sizing: border-box;
+  font-family: "inter", "Sans-Serif";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 1440px) {
+  section {
+    padding: 0 100px !important;
+  }
+  main > .main > .mainTxt > h1 {
+    font-size: 8rem;
+    font-weight: 400;
+    color: white;
+  }
+  main > .main > .mainTxt > p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+  }
+  main section.room_sec1 > div.roomWrapper > ul > li {
+    width: 49%;
+  }
+  main section.room_sec1 > div.roomWrapper > ul > li > figure > div.slide {
+    height: 22vw;
+  }
+}
+@media (max-width: 1440px) and (max-width: 1220px) {
+  main section.room_sec1 > div.roomWrapper > ul > li > figure > div.txtWrapper > figcaption {
+    font-size: 1rem;
+    margin: 15px 0 17px;
+  }
+}/*# sourceMappingURL=roomTablet.css.map */

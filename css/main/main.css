@@ -380,6 +380,10 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   position: relative;
   z-index: 0;
 }
+.vis_box .movie video {
+  height: 950px;
+  object-fit: cover;
+}
 .vis_box .bot_wrap .btt {
   z-index: 5;
   position: fixed;
@@ -518,11 +522,14 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   .sliding_content
   .slide_wrap
   .btn_close {
+  border-radius: 5px;
+  width: 50px;
+  height: 30px;
+  background-color: #23402a;
+  color: #eff299;
   position: absolute;
-  right: 15px;
-  top: 10px;
-  cursor: pointer;
-  display: block;
+  bottom: 20px;
+  right: 70px;
 }
 .main_sec2
   .main_sec2_info
@@ -538,17 +545,6 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   position: absolute;
   bottom: 20px;
   right: 15px;
-}
-.main_sec2
-  .main_sec2_info
-  .main_sec2_wrap
-  .sliding_content
-  .slide_wrap
-  .btn_close::after {
-  content: "×";
-  display: inline-block;
-  font-size: 2.1875rem;
-  color: #23402a;
 }
 .main_sec2 .main_sec2_info .main_sec2_wrap .sliding_content .slide_wrap .rooms {
   width: 255px;
@@ -801,6 +797,15 @@ main .modal-overlay .center_mid .chatt .msg_ct.two .bubble {
   .sliding_content
   .slide_wrap
   .select_num
+  .room:last-child {
+  margin-bottom: 50px;
+}
+.main_sec2
+  .main_sec2_info
+  .main_sec2_wrap
+  .sliding_content
+  .slide_wrap
+  .select_num
   .room {
   padding: 0 5px 0;
   opacity: 0;
@@ -945,7 +950,6 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap {
   align-items: center;
   justify-content: space-between;
 }
-
 main .main_sec2 .main_sec2_info .main_sec2_wrap .btn_search {
   color: #eff299;
   border: 1px solid #eff298;
@@ -955,14 +959,50 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .btn_search:hover {
   background-color: #eff298;
   color: #23402a;
 }
+@media (max-width: 1200px) {
+  main
+    .main_sec2
+    .main_sec2_info
+    .main_sec2_wrap
+    .btn_search:hover
+    .main_sec2_num {
+    display: none;
+  }
+  main
+    .main_sec2
+    .main_sec2_info
+    .main_sec2_wrap
+    .btn_search:hover
+    .main_sec2_wrap
+    .main_sec2_cal {
+    margin-left: 0px;
+  }
+  main
+    .main_sec2
+    .main_sec2_info
+    .main_sec2_wrap
+    .btn_search:hover
+    main
+    .main_sec2
+    .main_sec2_info
+    .main_sec2_wrap {
+    width: 100%;
+  }
+  main
+    .main_sec2
+    .main_sec2_info
+    .main_sec2_wrap
+    .btn_search:hover
+    main
+    .main_sec2
+    .main_sec2_info
+    .main_sec2_wrap
+    .main_sec2_cal {
+    margin-left: 50px;
+  }
+}
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_room p {
   margin-bottom: 10px;
-}
-main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_num {
-  display: flex;
-}
-main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_num div {
-  padding-left: 20px;
 }
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_num .sch {
   cursor: pointer;
@@ -974,7 +1014,6 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_num .sch {
   height: 41px;
   display: block;
 }
-
 main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal label {
   font-size: 18px;
   margin-bottom: 10px;
@@ -1126,7 +1165,7 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
   position: relative;
   width: min(90rem, 90%);
   margin: 0 auto;
-  min-height: 40vh;
+  min-height: 70vh;
   column-gap: 3rem;
   padding-block: min(20vh, 3rem);
 }
@@ -1189,7 +1228,7 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
 }
 
 .swiper-slide p {
-  color: #dadada;
+  color: white;
   font-weight: 300;
   padding: 0 1.563rem;
   line-height: 1.6;
@@ -1204,6 +1243,8 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
   margin: 1.25rem 1.563rem 3.438rem 1.563rem;
   padding: 0.438em 1.875rem;
   font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .swiper-slide a:hover {
@@ -1218,6 +1259,7 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
 
 .swiper-slide-active div {
   display: block;
+  position: relative;
   opacity: 1;
 }
 
@@ -1502,7 +1544,7 @@ main .main_sec2 .main_sec2_info .main_sec2_wrap .main_sec2_cal .drp-buttons {
 
 .main_sec3 {
   position: relative;
-  height: 50vh;
+  height: 80vh;
   margin-top: 40px;
 }
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약 정보 조회</title>
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="../css/checkCustomer.css">
+    <link rel="stylesheet" href="../css/checkCustomer_Resoponsive.css">
+
+    <script defer src="../js/checkCustomer.js"></script>
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/png" href="../common/img/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../common/img/favicomatic/favicon-16x16.png" sizes="16x16" />
+</head>
+<body>
+    <section class="checkCus">
+        <article class="checkCus_head">
+            <div class="checkCus_head_inner">
+                <a href="../sub/reservation.html">예약 페이지로</a>
+                <h2>예약 정보 조회</h2>
+                <a href="../index.html"><img src="./img/LionHill_logo/logo_square_withLetter.png"></a>
+            </div>
+        </article>
+        <article class="checkCus_body">
+            <div class="checkCus_body_inner">
+                <form id="resCheck" action="../sub/checkReservation.html">
+                    <div class="checkCus_body_top">
+                        
+                        <figure>
+                            <img src="./img/LionHill_logo/logo_onlyLetter.png">
+                        </figure>
+                        <div>
+                            <input type="text"placeholder="예약 번호" id="yourLHNumInput">
+                            <p>※ 예약시 받은 예약 번호를 입력하세요.</p>
+                        </div>
+
+                    </div>
+                    <div class="checkCus_body_bot_wrap">
+                        <div class="checkCus_body_bot">
+                            <button type="submit">예약 확인</button>
+                        </div>
+                        <p>※ 위에 입력한 정보는 저장되지 않습니다.</p>
+                    </div>
+            </form>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/png" href="../common/img/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../common/img/favicomatic/favicon-16x16.png" sizes="16x16" />
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/> -->
+
+    <link rel="stylesheet" href="../css/events_new.css" />
+    <link rel="stylesheet" href="../common/common.css" />
+    <link rel="stylesheet" href="../common/reset.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- 스크립트 -->
+    <script defer src="../js/common.js"></script>
+    <script defer src="../js/loginLoad.js"></script>
+
+    <script defer src="../js/event_new.js"></script>
+  </head>
+  <body>
+
+    
+    <section class="header_image">
+      <div class="header_image_word">
+        <h2>Event</h2>
+        <br/>
+        <p>이벤트들로 당신의 여행을 더욱 특별하게 만들어보세요.</p>
+      </div>
+      <figure><img src="../sub/img/events/Event_header_img.png" /></figure>
+    </section>
+
+    <header id="header">
+
+    </header>
+    
+
+    <section class="event">
+      <div class="event_sec1_word">
+        <h2>라이언힐 정보마당</h2>
+      </div>
+
+      <div class="event_sec1_pic">
+        <!-- 안에 들어가는 컨텐츠 -->
+        <div #swiperRef="" class="swiper mySwiperEvent">
+          <ul class="swiper-wrapper">
+
+            <li class="swiper-slide">
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>빛이 내린 모담골</span>
+                    <span>2019.10.4 ~ 2019.10.20</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_1.png" alt="빛이 내린 모담골 2019.10.4 ~ 2019.10.20" /></p>
+                </figure>
+              </a>
+
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>마라도 섬투어</span>
+                    <span>2019.10.30 ~ 2019.11.10</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_2.png" alt="마라도 섬투어 2019.10.30 ~ 2019.11.10" /></p>
+                </figure>
+              </a>
+            </li>
+
+
+            <li class="swiper-slide">
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>한라산 담수 구경</span>
+                    <span>2019.10.30 ~ 2019.11.10</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_3.png" alt="한라산 담수 구경 2019.10.30 ~ 2019.11.10" /></p>
+                </figure>
+              </a>
+
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>한로윈 페스티벌</span>
+                    <span>2022.10.29(토)</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_4.png" alt="한로윈 페스티벌 2022.10.29(토)" /></p>
+                </figure>
+              </a>
+
+            </li>
+
+            <li class="swiper-slide">
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>제주 해녀 체험</span>
+                    <span>2019.10.4 ~ 2019.10.20</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_5.png" alt="제주 해녀 체험 2019.10.4 ~ 2019.10.20" /></p>
+                </figure>
+              </a>
+
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>제주 감귤 시식 체험</span>
+                    <span>2023.9.4 ~ 2023.9.12</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_6.png" alt="제주 감귤 시식 체험 2023.9.4 ~ 2023.9.12" /></p>
+                </figure>
+              </a>
+            </li>
+
+            <li class="swiper-slide">
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>제주도 패키지</span>
+                    <span>2023.10 ~ 2019.12.20</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_7.png" alt="제주도 패키지 2023.10 ~ 2019.12.20" /></p>
+                </figure>
+              </a>
+
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>제주도 펜션 패키지<br>(*'라이온 힐' 포함)</span>
+                    <span>2023.6.4 ~ 2023.11.10</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_8.png" alt="제주도 펜션 패키지(*'라이온 힐' 포함) 2023.6.4 ~ 2023.11.10" /></p>
+                </figure>
+              </a>
+            </li>
+
+            <li class="swiper-slide">
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>제주도에서 놀멍쉬멍</span>
+                    <span>2016.7.11 ~ 2016.7.24</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_9.png" alt="제주도에서 놀멍쉬멍 2016.7.11 ~ 2016.7.24" /></p>
+                </figure>
+              </a>
+ 
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>청춘,<br>그저 견디기엔 너무 아까운<br>(*소설이 영화로! 소설 탐사)</span>
+                    <span>2019.10.4 ~ 2019.10.20</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_10.png" alt="청춘, 그저 견디기엔 너무 아까운(*소설이 영화로! 소설 탐사) 2019.10.4 ~ 2019.10.20" /></p>
+                </figure>
+              </a>
+            </li>
+
+            <li class="swiper-slide">
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>대한민국 구석구석<br>여행 패키지</span>
+                    <span>2018.7.26</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_11.png" alt="대한민국 구석구석 여행 패키지 2018.7.26" /></p>
+                </figure>
+              </a>
+
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>소문내기 이벤트</span>
+                    <span>2020.7.6 ~ 2020.8.17</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_12.png" alt="소문내기 이벤트 2020.7.6 ~ 2020.8.17" /></p>
+                </figure>
+              </a>
+            </li>
+
+            <li class="swiper-slide">
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>제주도 2인<br>왕복여행권</span>
+                    <span>2023.8.10 ~ 2023.9.12</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_13.png" alt="제주도 2인 왕복여행권 2023.8.10 ~ 2023.9.12" /></p>
+                </figure>
+              </a>
+
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>제주 인생샷!</span>
+                    <span>2023.6.14 ~ 2019.7.20</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_14.png" alt="제주 인생샷! 2023.6.14 ~ 2019.7.20" /></p>
+                </figure>
+              </a>
+            </li>
+
+            <li class="swiper-slide">
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>벚꽃<br>댕댕이 놀이터</span>
+                    <span>2023.5.10 ~ 2023.7.25</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_15.png" alt="벚꽃 댕댕이 놀이터 2023.5.10 ~ 2023.7.25" /></p>
+                </figure>
+              </a>
+
+              <a href="">
+                <figure>
+                  <div class="bg">
+                    <span>2박3일<br>제주 패키지</span>
+                    <span>2023.5.10 ~ 2023.7.25</span>
+                  </div>
+                  <p><img src="../sub/img/events/event_16.png" alt="2박3일 제주 패키지 2023.6.10 ~ 2023.6.12" /></p>
+                </figure>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="btnsWrapper">
+          <button type="button" class="swiper-button-prev">arrow_back_ios_new</button>
+          <button type="button" class="swiper-button-next">arrow_forward_ios</button>
+        </div>
+
+        <div class="swiper-pagination">
+          <span class="prePage">1</span>
+          /
+          <span class="allPage">8</span>
+        </div>
+
+    </section>
+
+    <footer>
+      <div class="inner">
+          <div class="foot_top">
+          <h2 class="logo">
+              <a href="../main/main.html">
+              <img src="../common/img/wh_logo.PNG" alt="" />
+              </a>
+          </h2>
+          <div class="foot_con">
+              <a href="" class="insta"
+              ><img src="../common/img/insta.png" alt=""
+              /></a>
+              <a href="" class="kakao"
+              ><img src="../common/img/chanal.png" alt=""
+              /></a>
+          </div>
+          </div>
+          <div class="foot_btm">
+          
+              <div class="info">
+                  <span class="info_tel"> TEL 010-1111-1111 </span>
+                  <div class="info_contents">
+                      <a href="../sub/about.html" class="">펜션소개</a>
+                      <a href="../sub/about.html" class="">오시는길</a>
+                      <a href="../sub/about.html" class="">개인정보처리방침</a>
+                  </div>   
+              </div>
+              <div class="line"></div>
+              <div class="copy">
+                  <div class="right">
+                  © 2016. 라이온힐휴양펜션 Co. All rights reserved.
+                  </div>
+                  <address>
+                  
+                  <span>제주특별자치도 서귀포시 안덕면 덕수리 236 (평화로 507)</span>
+                  <span>대표이사 : 이종석</span>
+                  <span> 사업자 등록번호 618-81-07176</span> 
+                  <span>TEL 010-1111-1111</span>
+                  
+                  </address>
+              </div>
+          </div>
+      </div>
+    </footer>
+  </body>
+</html>

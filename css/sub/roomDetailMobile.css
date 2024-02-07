@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+* {
+  box-sizing: border-box;
+  font-family: "inter", "Sans-Serif";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 950px) {
+  section {
+    padding: 0 62px !important;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) {
+  main > section.roomDetail_sec1 {
+    padding-left: 62px !important;
+    padding-right: 62px !important;
+  }
+  main > section.roomDetail_sec1 > h2 {
+    font-size: 2rem;
+    font-weight: inherit;
+    color: inherit;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) and (max-width: 500px) {
+  main > section.roomDetail_sec1 > div.reservWrapper > .reservBtnsWrapper {
+    width: 180px;
+    height: 50px;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) and (max-width: 500px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper > ul.iconWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper > ul.iconWrapper > li.icon {
+    margin: 0 11px;
+  }
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) and (max-width: 500px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper {
+    margin-top: 280px;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li::before {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    margin-bottom: 20px;
+    background-color: #ddd;
+  }
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li:first-child::before {
+    width: 90%;
+  }
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li > code {
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li:nth-of-type(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li:nth-of-type(5) > code {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) and (max-width: 500px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li:nth-of-type(5) > code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li:nth-of-type(5) > code > dl {
+    margin: 0 5px;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) and (max-width: 500px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li:nth-of-type(5) > code > dl {
+    margin: 0 5px 10px;
+  }
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li:nth-of-type(5) > code > dl:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 950px) and (max-width: 750px) {
+  main > section.roomDetail_sec1 > div.infoTxtWrapper ul.infoTxtWrapper > li:nth-of-type(5) > code > dl > dd ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 950px) {
+  main > section.roomDetail_sec2 {
+    padding: 187px 50px 260px !important;
+  }
+}/*# sourceMappingURL=roomDetailMobile.css.map */

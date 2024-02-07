@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reservation.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    
+    <script defer src="../js/common.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script defer src="../js/loginLoad.js"></script>
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/png" href="../common/img/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../common/img/favicomatic/favicon-16x16.png" sizes="16x16" />
+    
+    <title>예약</title>
+
+</head>
+
+<body>
+    <section class="header_image">
+        <div class="header_image_word">
+            <h2>Reservation</h2><br>
+        </div>
+        <figure><img src="../sub/img/reservation/reser_header_image.jpg"></figure>
+    </section>
+
+    <header id="header"></header>
+    <main>
+        <section class="reser_sec1">
+            <div class="left_box">
+                <h2 class="title2">라이언힐 예약하기</h2>
+                <div class="reser_contact">
+                    <p><span>주소</span>제주특별자치도 서귀포 시 언덕면 동광로 265-98 지도보기</p>
+                    <p><span>연락처</span>010-3021-1111</p>
+                    <p><span>결제방법</span>카드/무통장</p>
+                </div>
+            </div>
+            <div class="right_box">
+                <div class="check_reser">
+                    <h2 class="title2">예약 정보 확인하기</h2>
+                    <a id="checkMove">
+                        <figure><img src="./img/reservation/icon_search.jpg" alt="예약 정보 확인하기"></figure>
+                    </a>
+                </div>
+                <div class="check_room mo_only">
+                    <h2 class="title2">숙박정보 확인하기</h2>
+                    <figure><img src="./img/reservation/icon_edit.png" alt=""></figure>
+                </div>
+            </div>
+        </section>
+        <section class="reser_sec2">
+            <h2 class="title2 pc_only">숙박정보</h2>
+            <div class="reser_sec2_info">
+                <div class="reser_sec2_wrap">
+                    <div class="reser_sec2_room pc_only">
+                        <label>RESERVATION</label>
+                        <button class="select_room">ROOM</button>
+                    </div>
+                    <div class="reser_sec2_cal pc_only">
+                        <label class="">CHECKIN/OUT</label>
+                        <p class="select_date"> <span class="start_date"></span> ~ <span class="end_date"></span></p>
+                    </div>
+                    <div class="reser_sec2_num pc_only">
+                        <div class="reser_sec2_room_num">
+                            <div class="total_room_num">
+                                <label>ROOM</label>
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="reser_sec2_adult">
+                            <div class="total_adult_num">
+                                <label>ADULT</label>
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="reser_sec2_children">
+                            <div class="total_children_num">
+                                <label>CHILDREN</label>
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliding_content">
+                        <div class="slide_wrap">
+                            <div class="rooms">
+                                <ul>
+                                    <li class="btn_room" id="Couple Room 1" data-room="Couple Room 1">
+                                        <p>Couple Room 1</p>
+                                        <p>Lion Hill</p>
+                                    </li>
+                                    <li class="btn_room" id="Couple Room 2" data-room="Couple Room 2">
+                                        <p>Couple Room 2</p>
+                                        <p>Lion Hill</p>
+                                    </li>
+                                    <li class="btn_room" id="Couple Room 3" data-room="Couple Room 3">
+                                        <p>Couple Room 3</p>
+                                        <p>Lion Hill</p>
+                                    </li>
+                                    <li class="btn_room" id="Deluxe Room 1" data-room="Deluxe Room 1">
+                                        <p>Deluxe Room 1</p>
+                                        <p>Lion Hill</p>
+                                    </li>
+                                    <li class="btn_room" id="Deluxe Room 2" data-room="Deluxe Room 2">
+                                        <p>Deluxe Room 2</p>
+                                        <p>Lion Hill</p>
+                                    </li>
+                                    <li class="btn_room" id="Deluxe Room 3" data-room="Deluxe Room 3">
+                                        <p>Deluxe Room 3</p>
+                                        <p>Lion Hill</p>
+                                    </li>
+                                    <li class="btn_room" id="Deluxe Room 4" data-room="Deluxe Room 4">
+                                        <p>Deluxe Room 4</p>
+                                        <p>Lion Hill</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cal_wrap">
+                                <table class="Calendar">
+                                    <thead>
+                                        <tr>
+                                            <td id="prevCalendar" onClick="prevCalendar();" class="cal_move">&#60;</td>
+                                            <td colspan="5">
+                                                <span id="calYear"></span>년
+                                                <span id="calMonth"></span>월
+                                            </td>
+                                            <td id="nextCalendar" onClick="nextCalendar();" class="cal_move">&#62;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>일</td>
+                                            <td>월</td>
+                                            <td>화</td>
+                                            <td>수</td>
+                                            <td>목</td>
+                                            <td>금</td>
+                                            <td>토</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="select_num">
+                                <div class="room Couple1">
+                                    <p>Couple Room 1</p>
+                                    <div class="adult_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" readonly value="어른 0">
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                    <div class="children_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" value="아동 0" readonly>
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                </div>
+                                <div class="room Couple2">
+                                    <p>Couple Room 2</p>
+                                    <div class="adult_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" readonly value="어른 0">
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                    <div class="children_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" value="아동 0" readonly>
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                </div>
+                                <div class="room Couple3">
+                                    <p>Couple Room 3</p>
+                                    <div class="adult_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" readonly value="어른 0">
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                    <div class="children_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" value="아동 0" readonly>
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                </div>
+                                <div class="room Deluxe1">
+                                    <p>Deluxe Room 1</p>
+                                    <div class="adult_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" readonly value="어른 0">
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                    <div class="children_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" value="아동 0" readonly>
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                </div>
+                                <div class="room Deluxe2 ">
+                                    <p>Deluxe Room 2</p>
+                                    <div class="adult_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" readonly value="어른 0">
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                    <div class="children_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" value="아동 0" readonly>
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                </div>
+                                <div class="room Deluxe3">
+                                    <p>Deluxe Room 3</p>
+                                    <div class="adult_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" readonly value="어른 0">
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                    <div class="children_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" value="아동 0" readonly>
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                </div>
+                                <div class="room Deluxe4">
+                                    <p>Deluxe Room 4</p>
+                                    <div class="adult_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" readonly value="어른 0">
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                    <div class="children_num">
+                                        <span class="num_minus">-</span>
+                                        <input type="text" value="아동 0" readonly>
+                                        <span class="num_plus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="btn_close"></span>
+                            <button class="btn_confirm">확인</button>
+                        </div>
+                    </div>
+                    <div class="sliding_dim"></div>
+                </div>
+            </div>
+            <div class="grey_logo mo_only">
+                <figure><img src="../sub/img/LionHill_logo/mo_logo_grey.png" alt=""></figure>
+            </div>
+        </section>
+        <section class="reser_sec3">
+            <h2 class="title2">객실 가격</h2>
+            <div class="box_wrap">
+            </div>
+            <div class="sum_more">
+                <p class="room_sum title2">객실 금액: <span>0</span></p>
+                <a href="./roomDetail.html" target='_blank'>객실 더 보기</a>
+            </div>
+        </section>
+        <section class="reser_sec4">
+            <h2 class="title2">옵션선택</h2>
+            <div class="option_wrap">
+                <div class="option_list">
+                    <div class="left_box">
+                        <figure class="pc_only"><img src="../main/img/main_sec2_img4.jpg" alt="Personal Training">
+                        </figure>
+                        <div class="text_box">
+                            <h2 class="option_name title2">피트니스 퍼스널
+                                <span></span> 트레이닝
+                            </h2>
+                            <p class="capability pc_only">기준 6명 최대 12명</p>
+                        </div>
+                    </div>
+                    <div class="right_box">
+                        <div class="quantity">
+                            <div class="wrap_num">
+                                <div class="op_adult_quantity">
+                                    <label>어른</label>
+                                    <span class="num_minus">-</span>
+                                    <input type="text" value="0명">
+                                    <span class="num_plus">+</span>
+                                </div>
+                                <div class="op_children_quantity">
+                                    <label>아동</label>
+                                    <span class="num_minus">-</span>
+                                    <input type="text" value="0명">
+                                    <span class="num_plus">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option_select">
+                            <button class="confirm_option">선택</button>
+                            <p>640,000 원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="option_list">
+                    <div class="left_box">
+                        <figure class="pc_only"><img src="./img/reservation/dinnerParty.jpeg" alt="Dinner Party">
+                        </figure>
+                        <div class="text_box">
+                            <h2 class="option_name title2">투숙객 저녁파티 </h2>
+                            <p class="capability pc_only">기준 6명 최대 12명</p>
+                        </div>
+                    </div>
+                    <div class="right_box">
+                        <div class="quantity">
+                            <div class="wrap_num">
+                                <div class="op_adult_quantity">
+                                    <label>어른</label>
+                                    <span class="num_minus">-</span>
+                                    <input type="text" value="0명">
+                                    <span class="num_plus">+</span>
+                                </div>
+                                <div class="op_children_quantity">
+                                    <label>아동</label>
+                                    <span class="num_minus">-</span>
+                                    <input type="text" value="0명">
+                                    <span class="num_plus">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option_select">
+                            <button class="confirm_option">선택</button>
+                            <p>640,000 원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="option_list">
+                    <div class="left_box">
+                        <figure class="pc_only"><img src="../main/img/pic2.jpg" alt="Tangerine Farm">
+                        </figure>
+                        <div class="text_box">
+                            <h2 class="option_name title2">감귤 농장 체험</h2>
+                            <p class="capability pc_only">기준 6명 최대 12명</p>
+                        </div>
+                    </div>
+                    <div class="right_box">
+                        <div class="quantity">
+                            <div class="wrap_num">
+                                <div class="op_adult_quantity">
+                                    <label>어른</label>
+                                    <span class="num_minus">-</span>
+                                    <input type="text" value="0명">
+                                    <span class="num_plus">+</span>
+                                </div>
+                                <div class="op_children_quantity">
+                                    <label>아동</label>
+                                    <span class="num_minus">-</span>
+                                    <input type="text" value="0명">
+                                    <span class="num_plus">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option_select">
+                            <button class="confirm_option">선택</button>
+                            <p>640,000 원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total_wrap">
+                <p class="selected_date">선택 날짜: <span class="start_date"></span> ~ <span class="end_date"></span></p>
+                <p class="grand_total title2">총 금액: <span></span></p>
+                <button id="payBtn">결제하기</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../js/reservation.js"></script>
+</body>
+
+</html>

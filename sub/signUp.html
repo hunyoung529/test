@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp</title>
+    <link rel="stylesheet" href="../css/signUp.css">
+    <link rel="stylesheet" href="../css/signUp_Responsive.css">
+    <link rel="stylesheet" href="../common/reset.css">
+    <script defer="" src="../javascript/signUp.js"></script>
+    <!-- ↓↓↓ API ↓↓↓ -->
+    <meta name ="google-signin-client_id" content="28757865908-ifrp5bvpfkvetcd579arn0k7jcl5f70k.apps.googleusercontent.com">
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/png" href="../common/img/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../common/img/favicomatic/favicon-16x16.png" sizes="16x16" />
+</head>
+<body>
+    <div class="signUp_backg">
+        <article class="signUp">
+            <div class="signUp_head">
+                <div class="signUp_head_top">
+                    <figure><img src="./img/LionHill_logo/logo_horizontal.png"></figure>
+                    <a href="../index.html"><img src="./img/members/btn_close.png"></a>
+                </div>
+                <div class="signUp_head_bot">
+                    <hr>
+                    <h2><span>라이언힐</span><br>회원가입</h2>
+                </div>
+            </div>
+            <div class="signUp_body">
+                <div class="signUp_left">
+                    <div class="signUp_email">
+                        <a href="./newMember.html">
+                            <figure>
+                                <img src="./img/members/email_icon.png">
+                                <figcaption>이메일로 간편가입</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+                <div class="signUp_right">
+                    <ul class="signUp_noneMember">
+                        <li>
+                            <a href="./checkCustomer.html"><span>비회원 주문조회</span></a>
+                        </li>
+                    </ul>
+                    <ul class="signUp_kakao">
+                        <li onclick="kakaoLogin();">
+                            <a href="javascript:void(0)">
+                                <span>카카오 아이디로 회원가입</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+                    <script>//카카오 로그인 script
+                    Kakao.init('c74cee27e841ddfac6edca4429b56ab3');
+                    console.log(Kakao.isInitialized());
+                    function kakaoLogin() {
+                        Kakao.Auth.login({
+                        success: function (response) {
+                            Kakao.API.request({
+                            url: '/v2/user/me',
+                            success: function (response) {
+                                console.log(response)
+                            },
+                            fail: function (error) {
+                                console.log(error)
+                            },
+                            })
+                        },
+                        fail: function (error) {
+                            console.log(error)
+                        },
+                        })
+                    }
+                    </script>
+                    <ul class="signUp_google">
+                        <li id="GgCustomLogin">
+                            <a href="javascript:void(0)">
+                                <span>구글 아이디로 회원가입</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <script>//구글 로그인 script
+                        function init() {
+                            gapi.load('auth2', function() {
+                                gapi.auth2.init();
+                                options = new gapi.auth2.SigninOptionsBuilder();
+                                options.setPrompt('select_account');
+                                // 추가는 Oauth 승인 권한 추가 후 띄어쓰기 기준으로 추가
+                                options.setScope('email profile openid https://www.googleapis.com/auth/user.birthday.read');
+                                // 인스턴스의 함수 호출 - element에 로그인 기능 추가
+                                // GgCustomLogin은 li태그안에 있는 ID, 위에 설정한 options와 아래 성공,실패시 실행하는 함수들
+                                gapi.auth2.getAuthInstance().attachClickHandler('GgCustomLogin', options, onSignIn, onSignInFailure);
+                            })
+                        }
+                        
+                        function onSignIn(googleUser) {
+                            var access_token = googleUser.getAuthResponse().access_token
+                            $.ajax({
+                                // people api를 이용하여 프로필 및 생년월일에 대한 선택동의후 가져온다.
+                                url: 'https://people.googleapis.com/v1/people/me'
+                                // key에 자신의 API 키를 넣습니다.
+                                , data: {personFields:'birthdays', key:'AIzaSyDlGUZNRJZ-_CYec_5xsY2D8ZmlNu3Np_Y', 'access_token': access_token}
+                                , method:'GET'
+                            })
+                            .done(function(e){
+                                //프로필을 가져온다.
+                                var profile = googleUser.getBasicProfile();
+                                console.log(profile)
+                            })
+                            .fail(function(e){
+                                console.log(e);
+                            })
+                        }
+                        function onSignInFailure(t){		
+                            console.log(t);
+                        }
+                        </script>
+                        <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

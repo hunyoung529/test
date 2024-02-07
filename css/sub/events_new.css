@@ -1,0 +1,196 @@
+@import url("https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css");
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'SUIT-Regular';
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+section.event {
+  margin: 148px 183px !important;
+  transition: 0.2s margin;
+}
+@media (max-width: 1440px) {
+  section.event {
+    margin: 148px 100px !important;
+  }
+}
+@media (max-width: 950px) {
+  section.event {
+    margin: 148px 50px !important;
+  }
+}
+section.event .event_sec1_word {
+  margin-bottom: 33px;
+}
+section.event .event_sec1_word h2 {
+  margin-left: 50px;
+  font-size: 2.1875rem;
+  font-weight: bold;
+  color: #23402A;
+  white-space: nowrap;
+}
+@media (max-width: 1440px) {
+  section.event .event_sec1_word h2 {
+    font-size: 2.1875rem;
+  }
+}
+@media (max-width: 950px) {
+  section.event .event_sec1_word h2 {
+    font-size: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  section.event .event_sec1_word h2 {
+    font-size: 1.5rem;
+  }
+}
+section.event .event_sec1_pic {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vw;
+  max-height: 700px;
+}
+section.event .event_sec1_pic .mySwiperEvent {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: calc(100% - 100px);
+  height: calc(100% + 10px);
+  overflow: hidden;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper {
+  transform: translatey(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide {
+  width: 100%;
+  height: calc(100% - 10px);
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a figure {
+  width: 100%;
+  height: 100%;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a figure .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: inherit;
+  color: white;
+  opacity: 0;
+  transition: 0.2s;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a figure .bg span {
+  word-break: keep-all;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 120%;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a figure .bg span:nth-of-type(1) {
+  margin-bottom: 7px;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a figure .bg span:nth-of-type(2) {
+  font-size: 0.7rem;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a figure p {
+  width: 100%;
+  height: 100%;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a figure p img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  transition: 0.2s;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a:hover .bg {
+  opacity: 100%;
+}
+section.event .event_sec1_pic .mySwiperEvent ul.swiper-wrapper li.swiper-slide a:hover img {
+  transform: scale(1.2);
+}
+section.event .event_sec1_pic .btnsWrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+section.event .event_sec1_pic .btnsWrapper button {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  font-family: "Material Symbols Outlined" !important;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #23402A;
+  cursor: pointer;
+}
+section.event .event_sec1_pic .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(200%);
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #23402A;
+}
+section.event .event_sec1_pic .swiper-pagination > span {
+  margin: 0 8px;
+}/*# sourceMappingURL=events_new.css.map */

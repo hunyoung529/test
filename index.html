@@ -6,21 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./common/common.css">
     <link rel="stylesheet" href="./css/main/main.css">
+    <link rel="stylesheet" href="./css/main/main_responsive.css">
+    <link rel="stylesheet" href="./css/sub/login.css" />
+    <link rel="stylesheet" type="text/css" href="./css/sub/login_Responsive.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- 로그인 팝업 관련 ↓↓↓ -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+
+    <!-- 로그인 팝업 관련 ↑↑↑ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Parisienne&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- 스크립트 -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/loginLoad.js"></script>
+
+    <title>라이온힐 펜션</title>
 </head>
 
 <body>
-    <header></header>
+    <header id="header"></header>
     <main>
         <div class="wrap">
             <section class="main_vis">
@@ -404,7 +423,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <span class="btn_close"></span>
+                                <button class="btn_close">취소</button>
                                 <button class="btn_confirm">확인</button>
                             </div>
                         </div>
@@ -604,7 +623,7 @@
                     <div class="txt_wrap">
                         <strong class="changing-title" id="changingTitle"></strong>
                         <p class="changing-text" id="changingText"></p>
-                        <a class="changing-btn" href="./sub/fac.html">자세히 보기</a>
+                        <a class="changing-btn" id="changingBtn" href="./sub/fac.html">자세히 보기</a>
                     </div>
                 </div>
             </section>
@@ -737,6 +756,7 @@
         </div>
 
     </main>
+    <footer style="background-image: url(./main/img/Rectangl.jpg)"></footer>
     <script>
         AOS.init();
     </script>

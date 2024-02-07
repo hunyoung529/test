@@ -459,6 +459,10 @@ main .modal-overlay {
   .movie {
     position: relative;
     z-index: 0;
+    video {
+      height: 950px;
+      object-fit: cover;
+    }
   }
   .bot_wrap {
     .btt {
@@ -507,6 +511,7 @@ main .modal-overlay {
     .total_adult_num,
     .total_children_num {
       cursor: pointer;
+      white-space: nowrap;
     }
 
     .main_sec2_room {
@@ -520,6 +525,11 @@ main .modal-overlay {
         font-family: inherit;
         font-size: inherit;
         color: #eff299;
+        border: 1px solid #eff298;
+      }
+      .select_room:hover {
+        background-color: #eff298;
+        color: #23402a;
       }
     }
 
@@ -591,11 +601,14 @@ main .modal-overlay {
         align-items: center;
 
         .btn_close {
+          border-radius: 5px;
+          width: 50px;
+          height: 30px;
+          background-color: #23402a;
+          color: #eff299;
           position: absolute;
-          right: 15px;
-          top: 10px;
-          cursor: pointer;
-          display: block;
+          bottom: 20px;
+          right: 70px;
         }
 
         .btn_confirm {
@@ -607,13 +620,6 @@ main .modal-overlay {
           position: absolute;
           bottom: 20px;
           right: 15px;
-        }
-
-        .btn_close::after {
-          content: "×";
-          display: inline-block;
-          font-size: 2.1875rem;
-          color: #23402a;
         }
 
         .rooms {
@@ -737,7 +743,9 @@ main .modal-overlay {
         .select_num {
           width: 255px;
           height: 100%;
-
+          .room:last-child {
+            margin-bottom: 50px;
+          }
           .room {
             padding: 0 5px 0;
             opacity: 0;
@@ -844,18 +852,37 @@ main .main_sec2 {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      .btn_search {
+        color: #eff299;
+        border: 1px solid #eff298;
+        padding: 10px;
+      }
+      .btn_search:hover {
+        @media (max-width: 1200px) {
+          .main_sec2_num {
+            display: none;
+          }
 
+          .main_sec2_wrap .main_sec2_cal {
+            margin-left: 0px;
+          }
+
+          main .main_sec2 .main_sec2_info .main_sec2_wrap {
+            .main_sec2_cal {
+              margin-left: 50px;
+            }
+
+            width: 100%;
+          }
+        }
+        background-color: #eff298;
+        color: #23402a;
+      }
       .main_sec2_room p {
         margin-bottom: 10px;
       }
 
       .main_sec2_num {
-        display: flex;
-
-        div {
-          padding-left: 20px;
-        }
-
         .sch {
           cursor: pointer;
           margin-left: 30px;
@@ -869,14 +896,10 @@ main .main_sec2 {
       }
 
       .main_sec2_cal {
-        /* Weekday Heading */
-
         label {
           font-size: 18px;
           margin-bottom: 10px;
           display: block;
-
-          /* text-align: left; */
         }
 
         input {
@@ -1098,7 +1121,7 @@ main .main_sec2 {
 }
 
 .swiper-slide p {
-  color: #dadada;
+  color: white;
   font-weight: 300;
   padding: 0 1.563rem;
   line-height: 1.6;
@@ -1108,11 +1131,12 @@ main .main_sec2 {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 .swiper-slide a {
   margin: 1.25rem 1.563rem 3.438rem 1.563rem;
   padding: 0.438em 1.875rem;
   font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .swiper-slide a:hover {
@@ -1127,6 +1151,7 @@ main .main_sec2 {
 
 .swiper-slide-active div {
   display: block;
+  position: relative;
   opacity: 1;
 }
 :root {
